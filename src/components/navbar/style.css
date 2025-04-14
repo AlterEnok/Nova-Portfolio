@@ -1,9 +1,23 @@
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
     padding: 20px 0;
     background-color: var(--nav-bg);
     border-bottom: 1px solid var(--nav-border);
     color: var(--nav-text);
     letter-spacing: normal;
+}
+
+.nav--hidden {
+    transform: translateY(-100%);
+}
+
+.nav--visible {
+    transform: translateY(0);
 }
 
 .nav-row {
@@ -17,14 +31,25 @@
 
 .logo {
     margin-right: auto;
-    color: var(--nav-text);
-    font-size: 24px;
-    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    /* высота шапки */
 }
+
+.logo img {
+
+    max-height: 451%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
 
 .logo strong {
     font-weight: 700;
 }
+
 
 .nav-list {
     display: flex;
@@ -39,26 +64,77 @@
 
 .nav-list__link {
     color: var(--nav-text);
-    transition: opacity 0.2s ease-in;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
 }
 
 .nav-list__link:hover {
-    opacity: 0.8;
+    background: linear-gradient(90deg, #6a00ff, #b300ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
-.nav-list__link--active {
-    position: relative;
-}
-
-.nav-list__link--active::before {
+.nav-list__link::before {
     content: '';
-
     position: absolute;
     left: 0;
-    top: 100%;
-
-    display: block;
+    bottom: 0;
     height: 2px;
     width: 100%;
-    background-color: var(--accent);
+    background: linear-gradient(90deg, #6a00ff, #b300ff);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+    opacity: 1;
+    pointer-events: none;
+}
+
+
+.nav-list__link--active::before {
+    transform: scaleX(1);
+}
+
+.nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.lang-btn {
+    margin-left: 11vh;
+    position: relative;
+
+}
+
+.toggle-img {
+    height: 23px;
+}
+
+.lang-toggle-btn {
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.lang-toggle-btn:hover {
+    background-color: var(--accent-light);
+    transform: scale(1.1);
 }

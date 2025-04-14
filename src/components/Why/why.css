@@ -1,0 +1,158 @@
+.why-us {
+    margin-top: 80px;
+    padding: 80px 0;
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.why-us__title {
+    text-align: center;
+    font-size: 38px;
+    color: #b300ff;
+    font-family: 'Jersey 25', sans-serif;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.dark .why-us__title {
+    color: #fff;
+}
+
+.why-us__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    z-index: 2;
+    position: relative;
+}
+
+.why-us__card {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    color: #111;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.why-us__card:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 0 20px rgba(179, 0, 255, 0.5);
+}
+
+.dark .why-us__card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark .why-us__card:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 0 20px rgba(179, 0, 255, 0.5);
+}
+
+.why-us__icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    filter: brightness(1.2);
+    transition: transform 0.3s ease;
+}
+
+.why-us__card:hover .why-us__icon {
+    transform: rotate(6deg) scale(1.1);
+}
+
+.why-us__card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.why-us__card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.dark .why-us__card p {
+    color: #cfcfcf;
+}
+
+/* Неоновые точки */
+.neon-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.neon-dots .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(179, 0, 255, 0.9);
+    box-shadow:
+        0 0 10px rgba(179, 0, 255, 0.9),
+        0 0 20px rgba(179, 0, 255, 0.8),
+        0 0 30px rgba(179, 0, 255, 0.6);
+    animation: float-up 18s ease-in-out infinite;
+}
+
+@keyframes float-up {
+    from {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-10vh) scale(1.1);
+        opacity: 0;
+    }
+}
+
+/* Случайные позиции и задержки */
+.neon-dots .dot:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.neon-dots .dot:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.neon-dots .dot:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.neon-dots .dot:nth-child(4) {
+    left: 55%;
+    animation-delay: 1s;
+}
+
+.neon-dots .dot:nth-child(5) {
+    left: 70%;
+    animation-delay: 3s;
+}
+
+.neon-dots .dot:nth-child(6) {
+    left: 85%;
+    animation-delay: 5s;
+}

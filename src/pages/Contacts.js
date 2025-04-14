@@ -1,31 +1,59 @@
+import { useState } from 'react';
+import AnimatedPage from '../components/SmoothPage/smooth.js';
+import Sparkle from '../components/Sparkle/sparkle.js';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 const Contacts = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Пример обработчика, если хочешь открыть/закрыть меню (для теста)
+    // По факту ты можешь передать сюда реальный стейт из бургер-меню
+    const toggleMenu = () => setIsMenuOpen(prev => !prev);
+
     return (
-        <main className="section">
-            <div className="container">
-                <h1 className="title-1">Contacts</h1>
+        <AnimatedPage>
+            <section className="contacts-modern">
+                <div className="contacts-modern__glow"></div>
 
-                <ul className="content-list">
-                    <li className="content-list__item">
-                        <h2 className="title-2">Location</h2>
+                <h1 className="contacts-modern__title">Contacts</h1>
+
+                <div className="contacts-modern__grid">
+                    <div className="contacts-modern__card">
+                        <div className="contacts-modern__icon"><i className="fas fa-map-marker-alt"></i></div>
+                        <h3>Location</h3>
                         <p>Ukraine</p>
-                    </li>
-                    <li className="content-list__item">
-                        <h2 className="title-2">Telegram</h2>
-                        <p><a href="tel:+380668790568">https://t.me/The_Nova_Team</a></p>
-                    </li>
-                    <li className="content-list__item">
-                        <h2 className="title-2">Instagram</h2>
-                        <p><a href="https://www.instagram.com/novateamweb/?hl=de">https://www.instagram.com/novateamweb/?hl=de</a></p>
-                    </li>
-                    <li className="content-list__item">
-                        <h2 className="title-2">Email</h2>
-                        <p><a href="mailto:novateam.web@gmail.com">novateam.web@gmail.com</a></p>
-                    </li>
-                </ul>
+                    </div>
 
-            </div>
-        </main>
+                    <div className="contacts-modern__card">
+                        <div className="contacts-modern__icon"><i className="fab fa-telegram-plane"></i></div>
+                        <h3>Telegram</h3>
+                        <a href="https://t.me/The_Nova_Team" target="_blank" rel="noopener noreferrer">
+                            https://t.me/The_Nova_Team
+                        </a>
+                    </div>
+
+                    <div className="contacts-modern__card">
+                        <div className="contacts-modern__icon"><i className="fab fa-instagram"></i></div>
+                        <h3>Instagram</h3>
+                        <a href="https://www.instagram.com/novateamweb/?hl=de" target="_blank" rel="noopener noreferrer">
+                            instagram.com/novateamweb
+                        </a>
+                    </div>
+
+                    <div className="contacts-modern__card">
+                        <div className="contacts-modern__icon"><i className="fas fa-envelope"></i></div>
+                        <h3>Email</h3>
+                        <a href="mailto:novateam.web@gmail.com">novateam.web@gmail.com</a>
+                    </div>
+                </div>
+
+
+
+            </section>
+
+            <Sparkle hidden={isMenuOpen} />
+        </AnimatedPage>
     );
-}
+};
 
 export default Contacts;

@@ -1,49 +1,114 @@
 .footer {
+    position: relative;
     margin-top: auto;
-    padding: 60px 0 50px;
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
+    padding: 80px 5vw 60px;
+    background-color: #121212;
+    color: #dcdcdc;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'K2D', sans-serif;
+}
+
+.footer__pulse-bg,
+.footer__mouse-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer__pulse-bg {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 60%);
+    animation: pulse 8s infinite;
+}
+
+.footer__mouse-glow {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%),
+            rgba(0, 255, 255, 0.15),
+            rgba(0, 128, 255, 0.1),
+            rgba(128, 0, 255, 0.05),
+            transparent 80%);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
 }
 
 .footer__wrapper {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    row-gap: 27px;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.social {
+.footer__sections {
     display: flex;
-    column-gap: 30px;
+    justify-content: space-around;
+    gap: 60px;
+    flex-wrap: wrap;
+
+}
+
+.footer__section {
+    flex: 0 0 auto;
+    min-width: 200px;
+}
+
+.footer__section h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.footer__section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__section li {
+    margin-bottom: 12px;
+}
+
+.footer__section a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    display: inline-flex;
     align-items: center;
-
+    gap: 8px;
 }
 
-
-.social__item {
-    opacity: 0.5;
-    transition: all .3s ease-in-out;
+.footer__section a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    transform: translateX(2px);
 }
-
-.social__item:hover {
-    opacity: 1;
-}
-
-
-.social__item-tg img {
-
-    background-color: #eee7e7;
-    width: 43px;
-    border-radius: 50%;
-
-}
-
-
 
 .copyright {
-    font-size: 16px;
-}
-
-.copyright p+p {
-    margin-top: 0.5em;
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: #888;
+    position: relative;
+    bottom: -2vw;
 }

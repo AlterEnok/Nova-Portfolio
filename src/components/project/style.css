@@ -117,6 +117,10 @@
     color: #9a067c;
 }
 
+.project__overlay .Wordpress {
+    color: #9a067ca5;
+}
+
 .project:hover .project__overlay {
     opacity: 1;
 }
