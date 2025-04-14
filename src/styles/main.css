@@ -57,7 +57,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-
+	overflow-x: hidden;
 	font-family: 'DM Sans', sans-serif;
 	letter-spacing: -0.5px;
 
