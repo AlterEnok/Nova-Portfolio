@@ -80,7 +80,7 @@ const ContactForm = ({ isOpen, setIsOpen }) => {
                                 <div className="input-grid">
                                     <input type="text" name="user_name" placeholder={t("form.name")} required />
                                     <input type="email" name="user_email" placeholder={t("form.email")} required />
-                                    <input ref={phoneInputRef} type="tel" name="phone" placeholder={t("form.phone")} required />
+                                    <input ref={phoneInputRef} type="tel" name="phone" placeholder={t("form.phone")} required autoFocus={false} />
                                     <input type="text" name="message" placeholder={t("form.message")} />
                                 </div>
 

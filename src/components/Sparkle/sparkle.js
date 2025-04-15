@@ -81,7 +81,7 @@ const Sparkle = ({ hidden = false }) => {
                 width: '100%',
                 height: '100vh',
                 pointerEvents: 'none',
-                zIndex: 9999,
+                zIndex: 10000,
                 opacity: hidden ? 0 : 1,
                 transition: 'opacity 0.3s ease-in-out',
             }}
