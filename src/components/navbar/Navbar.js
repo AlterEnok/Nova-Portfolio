@@ -10,48 +10,72 @@ const Navbar = () => {
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const { t, i18n } = useTranslation();
-
-    // Используем localStorage для языка
     const [currentLang, setCurrentLang] = useLocalStorage('language', 'en');
 
-    // Обновляем язык при изменении currentLang
     useEffect(() => {
         i18n.changeLanguage(currentLang);
     }, [currentLang, i18n]);
 
-    const toggleLanguage = () => {
-        const newLang = currentLang === 'en' ? 'ua' : 'en';
-        setCurrentLang(newLang);       // сохраняем в localStorage
-        i18n.changeLanguage(newLang);  // меняем язык
-        setMenuOpen(false);
+    const handleScroll = () => {
+        setShowNavbar(window.scrollY <= lastScrollY);
+        setLastScrollY(window.scrollY);
     };
 
     useEffect(() => {
-        const handleScroll = () => {
-            setShowNavbar(window.scrollY <= lastScrollY);
-            setLastScrollY(window.scrollY);
-        };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY]);
 
-    // 👉 useEffect to handle scroll lock when menu is open
     useEffect(() => {
-        if (menuOpen) {
-            document.body.classList.add('no-scroll');
-        } else {
-            document.body.classList.remove('no-scroll');
-        }
-
-        // Cleanup при размонтировании
-        return () => document.body.classList.remove('no-scroll');
+        document.body.classList.toggle('no-scroll', menuOpen);
     }, [menuOpen]);
+
+    const changeLanguage = (lang) => {
+        setCurrentLang(lang);
+        setDropdownOpen(false);
+        setMenuOpen(false);
+    };
 
     const normalLink = "nav-list__link";
     const activeLink = "nav-list__link nav-list__link--active";
+
+    const LanguageDropdown = () => {
+        let timeoutId;
+
+        const handleMouseEnter = () => {
+            clearTimeout(timeoutId);
+            setDropdownOpen(true);
+        };
+
+        const handleMouseLeave = () => {
+            timeoutId = setTimeout(() => {
+                setDropdownOpen(false);
+            }, 200);
+        };
+
+        return (
+            <div
+                className="lang-dropdown"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <div className="lang-wrapper">
+                    <button className="lang-btn-text">{currentLang.toUpperCase()}</button>
+                    <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+                        {currentLang !== 'en' && <div onClick={() => changeLanguage('en')}>EN</div>}
+                        {currentLang !== 'ua' && <div onClick={() => changeLanguage('ua')}>UA</div>}
+                        {currentLang !== 'de' && <div onClick={() => changeLanguage('de')}>DE</div>}
+                        {currentLang !== 'fr' && <div onClick={() => changeLanguage('fr')}>FR</div>}
+                        {currentLang !== 'es' && <div onClick={() => changeLanguage('es')}>ES</div>}
+                        {currentLang !== 'ru' && <div onClick={() => changeLanguage('ru')}>RU</div>}
+                    </div>
+                </div>
+            </div>
+        );
+    };
 
     return (
         <nav className={`nav ${showNavbar ? 'nav--visible' : 'nav--hidden'}`}>
@@ -68,57 +92,19 @@ const Navbar = () => {
                     </div>
 
                     <ul className={`nav-list ${menuOpen ? 'active' : ''}`}>
-                        <li>
-                            <NavLink to="/" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>{t("home")}</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/projects" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>{t("projects")}</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contacts" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>{t("contacts")}</NavLink>
-                        </li>
+                        <li><NavLink to="/" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>{t("home")}</NavLink></li>
+                        <li><NavLink to="/projects" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>{t("projects")}</NavLink></li>
+                        <li><NavLink to="/contacts" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>{t("contacts")}</NavLink></li>
 
-                        {/* Mobile only */}
                         <div className="mobile-controls">
                             <BtnDarkMode />
-                            <button
-                                onClick={toggleLanguage}
-                                className="lang-btn"
-                                aria-label="Toggle language"
-                            >
-                                <img
-                                    src={currentLang === 'en'
-                                        ? 'https://flagcdn.com/w40/gb.png'
-                                        : 'https://flagcdn.com/w40/ua.png'}
-                                    alt={currentLang === 'en' ? 'English' : 'Українська'}
-                                    className='toggle-img'
-                                    width="24"
-                                    height="24"
-                                    style={{ borderRadius: '50%' }}
-                                />
-                            </button>
+                            <LanguageDropdown />
                         </div>
                     </ul>
 
-                    {/* Desktop only */}
                     <div className="nav-controls">
                         <BtnDarkMode />
-                        <button
-                            onClick={toggleLanguage}
-                            className="lang-btn"
-                            aria-label="Toggle language"
-                        >
-                            <img
-                                src={currentLang === 'en'
-                                    ? 'https://flagcdn.com/w40/gb.png'
-                                    : 'https://flagcdn.com/w40/ua.png'}
-                                alt={currentLang === 'en' ? 'English' : 'Українська'}
-                                className='toggle-img'
-                                width="24"
-                                height="24"
-                                style={{ borderRadius: '50%' }}
-                            />
-                        </button>
+                        <LanguageDropdown />
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 	padding: 0px;
 	margin: 0px;
 	border: none;
-	scrollbar-width: thin;
+	scrollbar-width: auto;
 	scrollbar-color: #9205d8 rgba(255, 255, 255, 0.05);
 }
 
@@ -13,25 +13,27 @@
 	box-sizing: border-box;
 }
 
+/* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 26px;
+	/* толщина скроллбара */
 }
 
 ::-webkit-scrollbar-track {
-	background: rgba(255, 255, 255, 0.05);
-	/* прозрачный трек */
+	background: #1a1a1a;
+	/* трек */
+	border-radius: 888px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: linear-gradient(180deg, #12c2e9, #c471ed, #f64f59);
-	border-radius: 20px;
-	border: 2px solid rgba(0, 0, 0, 0.2);
-
+	background-color: #9205d8;
+	border-radius: 999px;
+	border: 5px solid transparent;
+	background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(180deg, #f64f59, #c471ed, #12c2e9);
-
+	background-color: #0088cc;
 }
 
 :focus,

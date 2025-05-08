@@ -1,0 +1,159 @@
+{
+    "home": "Startseite",
+    "projects": "Projekte",
+    "contacts": "Kontakt",
+    "poweringProjects": "Projekte mit Power durch",
+    "frontendTitle": "Frontend",
+    "frontendText": "Wir entwickeln reaktionsschnelle, leistungsstarke Benutzeroberflächen mit HTML, CSS, JavaScript und React. Unser Ansatz sorgt für schnelle Ladezeiten, flüssige Animationen und Kompatibilität über Geräte und Browser hinweg. Auch WordPress-Seiten sind möglich.",
+    "backendTitle": "Backend",
+    "backendText": "Wir entwickeln sichere und skalierbare Backends mit Node.js, PHP, Laravel und MySQL. Ob Benutzer-Authentifizierung, Datenbanken oder benutzerdefinierte APIs – wir sorgen für zuverlässige Systeme. Auch CMS-Integrationen oder eigene Admin-Panels sind möglich.",
+    "uiuxTitle": "UI/UX",
+    "uiuxText": "Wir gestalten moderne und benutzerfreundliche Oberflächen mit Figma und Adobe XD, mit Fokus auf Benutzerführung, Barrierefreiheit und visuelle Konsistenz. Ob Landingpage oder vollständiges Produkt-UI – wir schaffen Erlebnisse, die überzeugen.",
+    "workflow": "Unser Arbeitsprozess",
+    "steps": {
+        "1": {
+            "title": "Projektbesprechung",
+            "text": "Wir hören aufmerksam zu und analysieren Ihre Anforderungen, um das perfekte Projekt zu gestalten."
+        },
+        "2": {
+            "title": "Design & Prototyping",
+            "text": "Wir erstellen einzigartige Layouts und Prototypen, um sicherzustellen, dass wir auf dem richtigen Weg sind."
+        },
+        "3": {
+            "title": "Entwicklung",
+            "text": "Wir schreiben sauberen Code und entwickeln eine funktionale und ansprechende Website."
+        },
+        "4": {
+            "title": "Test & Launch",
+            "text": "Wir führen abschließende Tests durch, damit beim Launch alles reibungslos funktioniert."
+        },
+        "5": {
+            "title": "Support & Optimierung",
+            "text": "Wir bleiben an Ihrer Seite und optimieren Ihre Website kontinuierlich für beste Ergebnisse."
+        }
+    },
+    "header": {
+        "titleStrong": "Wir sind",
+        "titleEm": "Nova Team",
+        "subtitle": "die Schöpfer digitaler Exzellenz. Von der Idee bis zum Code – wir gestalten und entwickeln Websites mit Wirkung.",
+        "text": "Ihre Vision ist unsere Mission",
+        "btn": "Projekte ansehen"
+    },
+    "faq": {
+        "title": "Häufige Fragen",
+        "1": {
+            "question": "Wie lange dauert es, eine Website zu erstellen?",
+            "answer": "In der Regel 7 bis 15 Tage – je nach Komplexität und Design."
+        },
+        "2": {
+            "question": "Gibt es Support nach der Entwicklung?",
+            "answer": "Ja, der erste Monat ist kostenlos. Danach 50–60 Dollar pro Monat."
+        },
+        "3": {
+            "question": "Welche weiteren Dienstleistungen bieten Sie an?",
+            "answer": "Nach der Entwicklung unterstützen wir mit Marketing durch unsere Partner. Zusätzlich bieten wir Bearbeitung, Videoproduktion und mehr an."
+        },
+        "4": {
+            "question": "Helfen Sie bei Hosting und Domain?",
+            "answer": "Ja, wir beraten und helfen bei der Auswahl – oder übernehmen alles für Sie."
+        },
+        "5": {
+            "question": "Wie kann ich Sie kontaktieren?",
+            "answer": "Über Telegram, Instagram oder das Kontaktformular auf der Website."
+        }
+    },
+    "whyChooseUs": {
+        "title": "Warum wir?",
+        "subtitle": "Mehr als nur ein Team – Ihr zuverlässiger Digitalpartner.",
+        "reasons": [
+            {
+                "title": "Modernes Design",
+                "text": "Wir gestalten stilvolle und moderne Interfaces für Ihre Zielgruppe."
+            },
+            {
+                "title": "Kompletter Entwicklungszyklus",
+                "text": "Von der Idee bis zum Launch – alles aus einer Hand."
+            },
+            {
+                "title": "Schnelligkeit & Qualität",
+                "text": "Pünktliche Lieferung ohne Qualitätsverlust."
+            }
+        ]
+    },
+    "whyUs": {
+        "title": "Warum Nova Team?",
+        "reasons": {
+            "1": {
+                "title": "Individuelle Herangehensweise",
+                "text": "Jedes Projekt wird auf Ihre Geschäftsziele abgestimmt."
+            },
+            "2": {
+                "title": "Schnell & Zuverlässig",
+                "text": "Schnelle Umsetzung bei hoher Qualität."
+            },
+            "3": {
+                "title": "Geschäftsorientiertes Design",
+                "text": "Unser Design hilft Ihnen, Kunden zu gewinnen."
+            },
+            "4": {
+                "title": "Langfristige Partnerschaft",
+                "text": "Wir begleiten Sie auch nach dem Launch weiter."
+            }
+        }
+    },
+    "form": {
+        "title": "Lassen Sie uns über Ihr Projekt sprechen",
+        "subtitle": "Füllen Sie das Formular aus – wir melden uns in Kürze",
+        "name": "Name",
+        "email": "Ihre E-Mail",
+        "phone": "Telefonnummer",
+        "message": "Nachricht (optional)",
+        "siteTypeTitle": "Welche Art von Website benötigen Sie?",
+        "send": "Senden",
+        "success": "Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns bald.",
+        "options": {
+            "landing": "Landingpage",
+            "corporate": "Unternehmensseite",
+            "ecommerce": "E-Commerce",
+            "undecided": "Unentschlossen"
+        }
+    },
+    "projectss": {
+        "tesla": {
+            "description": "Tesla-Landing mit Anpassung und sanfter Animation. Zeigt unser Können bei responsivem Layout und Design."
+        },
+        "appleHeadphones": {
+            "description": "Konzept für Apple-Kopfhörer-Branding. Klare Struktur, schöne Animation und starker Fokus auf visuelle Gestaltung."
+        },
+        "scrollAnimation": {
+            "description": "Scroll-Animationsprojekt mit GSAP für flüssige Übergänge. Verbessert die Nutzererfahrung mit animierten Effekten."
+        },
+        "mercedesConcept": {
+            "description": "Konzept-Landingpage für den neuen Mercedes AVTR."
+        },
+        "fairyParallax": {
+            "description": "Magisches Scroll-Erlebnis mit 3D-Parallax, ScrollTrigger und GSAP. Animationen werden durch Scrollen gesteuert."
+        },
+        "priceCards": {
+            "description": "Responsives Preis-Karten-Layout mit klarem Design und SCSS-Struktur. Zeigt den Einsatz von Flexbox und Komponenten."
+        },
+        "crappo": {
+            "description": "Krypto-Landingpage mit Animationen und modernem Layout. Fokus auf strukturiertem Inhalt und stilvollem UI."
+        },
+        "rentiz": {
+            "description": "Moderne Immobilien-Landingpage mit dynamischen Blöcken, Animationen und responsivem Design mit SCSS/Flex/Grid."
+        },
+        "beanAndLeaf": {
+            "description": "Kaffeeladen-Konzept mit starkem visuellen Layout und individuellem Bildslider. Komplett responsiv und animiert."
+        },
+        "beautyByMariia": {
+            "description": "Kommerzielle Website für eine Beauty-Masterin. Mit WordPress und individuellem Code erstellt. SEO-optimiert und kundenfreundlich."
+        },
+        "watches": {
+            "description": "E-Commerce-Konzept für eine Luxusuhrenmarke."
+        },
+        "TAR": {
+            "description": "Kommerzielle Website für ein deutsches Wärmemessunternehmen. Komplett mit HTML, CSS und JS entwickelt. Modernes Design, responsive und aktuell in der Vorschau verfügbar."
+        }
+    }
+}

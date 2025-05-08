@@ -74,9 +74,10 @@ body {
 	max-width: 1400px;
 }
 
-.none {
-	display: none !important;
-}
+
+
+
+
 
 /* CURSOR */
 .custom-cursor {
@@ -945,6 +946,17 @@ button[type="submit"] {
 		gap: 15px;
 		margin-top: 20px;
 		margin-right: -9vh;
+	}
+
+	.lang-wrapper {
+		top: -57dvh;
+		left: -23dvh;
+	}
+
+	.dropdown-content {
+		top: 116%;
+		left: -2px;
+		min-width: 58px;
 	}
 
 	body.no-scroll {
