@@ -554,6 +554,11 @@ body.light .contacts-modern__glow {
 	transition: 0.3s;
 }
 
+.burger.open {
+	position: relative;
+	top: 2dvh;
+}
+
 .burger.open span:nth-child(1) {
 	transform: rotate(50deg) translate(6px, 5px);
 }
@@ -864,7 +869,7 @@ button[type="submit"] {
 
 
 
-@media (max-width: 620px) {
+@media (max-width: 768px) {
 	/* Header  */
 
 	.header {
