@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Nova-Portfolio/static/css/main.600cc56c.css",
+    "main.css": "/Nova-Portfolio/static/css/main.967de536.css",
     "main.js": "/Nova-Portfolio/static/js/main.c5756e13.js",
     "static/js/453.906b0208.chunk.js": "/Nova-Portfolio/static/js/453.906b0208.chunk.js",
     "static/media/01.png": "/Nova-Portfolio/static/media/01.6b64e3a20f75b694e5df.png",
@@ -43,12 +43,12 @@
     "static/media/globe@2x.webp": "/Nova-Portfolio/static/media/globe@2x.5dc7e51d6b5d42fc2be4.webp",
     "index.html": "/Nova-Portfolio/index.html",
     "static/media/globe.webp": "/Nova-Portfolio/static/media/globe.7fb216c936a98b90918e.webp",
-    "main.600cc56c.css.map": "/Nova-Portfolio/static/css/main.600cc56c.css.map",
+    "main.967de536.css.map": "/Nova-Portfolio/static/css/main.967de536.css.map",
     "main.c5756e13.js.map": "/Nova-Portfolio/static/js/main.c5756e13.js.map",
     "453.906b0208.chunk.js.map": "/Nova-Portfolio/static/js/453.906b0208.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.600cc56c.css",
+    "static/css/main.967de536.css",
     "static/js/main.c5756e13.js"
   ]
 }
