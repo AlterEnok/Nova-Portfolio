@@ -1043,24 +1043,3 @@ button[type="submit"] {
 	}
 
 }
-
-/* @media screen and (max-width: 400px) and (max-height: 850px) and (orientation: portrait) {
-	.lang-wrapper {
-		top: -478px;
-		left: -181px;
-	}
-}
-
-@media screen and (max-width: 370px) and (max-height: 750px) and (orientation: portrait) {
-	.lang-wrapper {
-		top: -430px;
-		left: -158px;
-	}
-}
-
-@media screen and (max-width: 376px) and (max-height: 670px) and (orientation: portrait) {
-	.lang-wrapper {
-		top: -393px;
-		left: -158px;
-	}
-} */
