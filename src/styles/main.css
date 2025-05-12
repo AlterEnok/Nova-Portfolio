@@ -900,6 +900,7 @@ button[type="submit"] {
 	.dark-mode-btn {
 		order: 0;
 		top: -9px;
+		left: -9vh;
 		position: relative;
 		margin-right: 8vh;
 	}
@@ -957,8 +958,8 @@ button[type="submit"] {
 
 	.lang-wrapper {
 		position: absolute;
-		top: -11px;
-		left: 20px;
+		top: -463px;
+		left: -126px;
 		z-index: 10002;
 	}
 
