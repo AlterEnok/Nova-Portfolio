@@ -899,8 +899,9 @@ button[type="submit"] {
 
 	.dark-mode-btn {
 		order: 0;
+		top: -9px;
 		position: relative;
-		margin-right: 3vh;
+		margin-right: 8vh;
 	}
 
 	/* BURGER */
@@ -949,14 +950,16 @@ button[type="submit"] {
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		gap: 15px;
+		gap: 4px;
 		margin-top: 20px;
 		margin-right: -9vh;
 	}
 
 	.lang-wrapper {
-		top: -58dvh;
-		left: -21dvh;
+		position: absolute;
+		top: -11px;
+		left: 20px;
+		z-index: 10002;
 	}
 
 	.dropdown-content {
