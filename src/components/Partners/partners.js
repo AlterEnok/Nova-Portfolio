@@ -6,8 +6,7 @@ const Partners = () => {
     const { t } = useTranslation();
 
     const partners = [
-        'Enforce agency', 'NR agency', 'Traff control', 'Doba digital', 'Arrows agency',
-        'Svet agency'
+        'Enforce agency', 'NR agency', 'Doba digital', 'Arrows agency', 'Vdalo'
     ];
 
     return (
