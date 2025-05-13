@@ -968,10 +968,8 @@ button[type="submit"] {
 		left: -2px;
 		min-width: 50px;
 		max-height: 30vh;
-		/* Ещё меньше по высоте */
 		overflow-y: auto;
 		font-size: 12px;
-		/* Уменьшаем шрифт */
 		line-height: 1.4;
 		scrollbar-width: thin;
 		scrollbar-color: #aaa transparent;

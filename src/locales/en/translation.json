@@ -4,7 +4,7 @@
     "contacts": "Contacts",
     "poweringProjects": "Powering Projects with",
     "frontendTitle": "Frontend",
-    "frontendText": "We develop responsive, high-performance interfaces using HTML, CSS, JavaScript, and React. Our approach ensures fast loading, smooth animations, and compatibility across devices and browsers. We can also deliver sites on WordPress.",
+    "frontendText": "We develop responsive, high-performance interfaces using HTML, CSS, JavaScript, and React. Our approach ensures fast loading, smooth animations, and compatibility across devices and browsers. We can also deliver sites on WordPress and Shopify.",
     "backendTitle": "Backend",
     "backendText": "We develop secure and scalable backends using Node.js, PHP, Laravel, and MySQL. Whether it's handling user authentication, databases, or custom APIs — we ensure the system runs reliably. Integrations with CMS or custom admin panels are also available.",
     "uiuxTitle": "UI/UX",
@@ -33,7 +33,7 @@
         }
     },
     "header": {
-        "titleStrong": "We are",
+        "titleStrong": "We are agency",
         "titleEm": "Nova Team",
         "subtitle": "the creators of digital excellence. From concept to code, we design and develop websites that make a difference.",
         "text": "Your vision, is our mission",

@@ -138,6 +138,7 @@
     transform: scale(1.05);
 }
 
+/* Основной стиль (темная тема — по умолчанию) */
 .dropdown-content {
     position: absolute;
     top: 130%;
@@ -173,4 +174,18 @@
 
 .dropdown-content div:hover {
     background-color: rgba(168, 100, 240, 0.2);
+}
+
+body:not(.dark) .dropdown-content {
+    background-color: #9f5cf1;
+    border: 1px solid #602e96;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+body:not(.dark) .dropdown-content div {
+    color: #e3dce9;
+}
+
+body:not(.dark) .dropdown-content div:hover {
+    background-color: #c6a6ef;
 }

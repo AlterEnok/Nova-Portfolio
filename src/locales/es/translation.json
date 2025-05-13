@@ -4,7 +4,7 @@
     "contacts": "Contacto",
     "poweringProjects": "Impulsando proyectos con",
     "frontendTitle": "Frontend",
-    "frontendText": "Desarrollamos interfaces reactivas y potentes con HTML, CSS, JavaScript y React. Nuestro enfoque garantiza tiempos de carga rápidos, animaciones fluidas y compatibilidad entre dispositivos y navegadores. También ofrecemos sitios en WordPress.",
+    "frontendText": "Desarrollamos interfaces reactivas y potentes con HTML, CSS, JavaScript y React. Nuestro enfoque garantiza tiempos de carga rápidos, animaciones fluidas y compatibilidad entre dispositivos y navegadores. También ofrecemos sitios en WordPress y Shopify.",
     "backendTitle": "Backend",
     "backendText": "Creamos backends seguros y escalables con Node.js, PHP, Laravel y MySQL. Ya sea autenticación de usuarios, bases de datos o APIs personalizadas – garantizamos sistemas fiables. También ofrecemos integración con CMS o paneles de administración propios.",
     "uiuxTitle": "UI/UX",
@@ -33,7 +33,7 @@
         }
     },
     "header": {
-        "titleStrong": "Somos",
+        "titleStrong": "Somos la agencia",
         "titleEm": "Nova Team",
         "subtitle": "creadores de excelencia digital. Desde la idea hasta el código, diseñamos y desarrollamos sitios con impacto.",
         "text": "Tu visión es nuestra misión",
