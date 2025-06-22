@@ -7,6 +7,9 @@ const CustomCursor = () => {
     const rafRef = useRef(null);
     const [isDesktop, setIsDesktop] = useState(true);
 
+
+    const speed = 0.75;
+
     useEffect(() => {
         const checkScreenSize = () => {
             setIsDesktop(window.innerWidth >= 1024);
@@ -29,8 +32,8 @@ const CustomCursor = () => {
         };
 
         const followMouse = () => {
-            pos.current.x += (mouse.current.x - pos.current.x) * 0.1;
-            pos.current.y += (mouse.current.y - pos.current.y) * 0.1;
+            pos.current.x += (mouse.current.x - pos.current.x) * speed;
+            pos.current.y += (mouse.current.y - pos.current.y) * speed;
 
             if (cursorRef.current) {
                 cursorRef.current.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0) translate(-50%, -50%)`;

@@ -24,12 +24,21 @@ import project08Big from './../img/projects/08-big.jpg';
 
 import project09 from './../img/projects/09.jpg';
 import project09Big from './../img/projects/09-big.jpg';
+
 import project10 from './../img/projects/10.jpg';
 import project10Big from './../img/projects/10-big.jpg';
+
 import project11 from './../img/projects/11.jpg';
 import project11Big from './../img/projects/11-big.jpg';
+
 import project12 from './../img/projects/12.jpg';
 import project12Big from './../img/projects/12-big.jpg';
+
+import project13 from './../img/projects/13.jpg';
+import project13Big from './../img/projects/13-big.jpg';
+
+import project14 from './../img/projects/14.jpg';
+import project14Big from './../img/projects/14-big.jpg';
 
 const projects = [
     {
@@ -131,6 +140,7 @@ const projects = [
         technologies: ['HTML', 'Scss', 'JS'],
         type: 'concept'
     },
+
     {
         id: '10',
         title: 'Beauty by Mariia',
@@ -147,8 +157,28 @@ const projects = [
         descriptionKey: 'projectss.TAR.description',  // Ключ для перевода
         img: project12,
         imgBig: project12Big,
-        gitHubLink: 'https://alterenok.github.io/Tar/',
+        gitHubLink: 'https://tar-messdienst.de/',
         technologies: ['HTML', 'SCSS', 'JS'],
+        type: 'commercial'
+    },
+    {
+        id: '12',
+        title: 'E-commerse Kingsman',
+        descriptionKey: 'projectss.Kingsman.description',// Ключ для перевода
+        img: project13,
+        imgBig: project13Big,
+        gitHubLink: 'https://alterenok.github.io/Kingsman/',
+        technologies: ['HTML', 'CSS', 'JS'],
+        type: 'concept'
+    },
+    {
+        id: '13',
+        title: 'Dobrozem landing',
+        descriptionKey: 'projectss.Dobrozem.description',// Ключ для перевода
+        img: project14,
+        imgBig: project14Big,
+        gitHubLink: 'https://dobrozem.land/',
+        technologies: ['HTML', 'CSS', 'JS', 'DJANGO'],
         type: 'commercial'
     }
 ];

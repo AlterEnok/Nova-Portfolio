@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from './../components/header/Header';
 import Powering from './../components/Powering/powering';
 import Processing from './../components/Processing/processing';
-import Partners from './../components/Partners/partners';
+// import Partners from './../components/Partners/partners';
 import Faq from './../components/Faq/faq';
 import Why from './../components/Why/why.js';
 import Form from './../components/Form/form.js';
@@ -77,9 +77,9 @@ const Home = () => {
                                 <Processing />
                             </div>
 
-                            <div className="parallax" data-speed="3">
+                            {/* <div className="parallax" data-speed="3">
                                 <Partners />
-                            </div>
+                            </div> */}
 
 
                             <div className="parallax" data-speed="1">

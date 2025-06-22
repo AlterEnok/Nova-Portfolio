@@ -33,7 +33,7 @@
         }
     },
     "header": {
-        "titleStrong": "We are agency",
+        "titleStrong": "We are studio",
         "titleEm": "Nova Team",
         "subtitle": "the creators of digital excellence. From concept to code, we design and develop websites that make a difference.",
         "text": "Your vision, is our mission",
@@ -154,6 +154,12 @@
         },
         "TAR": {
             "description": "A full-scale commercial website for a German heat metering company.Built from scratch using HTML, CSS, and JavaScript. Fully responsive with a modern layout and custom design.Currently in development, but already available for preview."
+        },
+        "Kingsman": {
+            "description": "E-commerce concept store of men's suits and accessories. Stylish and elegant landing page, inspired by the aesthetics of Kingsman. Made from scratch on HTML, CSS and JavaScript."
+        },
+        "Dobrozem": {
+            "description": "One-page commercial landing for a land company. Clean, fast, and informative website created to support a webinar campaign. Built with HTML, CSS, JavaScript and Django, fully responsive and client-ready."
         }
     }
 }

@@ -33,7 +33,7 @@
         }
     },
     "header": {
-        "titleStrong": "Nous sommes agence",
+        "titleStrong": "Nous sommes studio",
         "titleEm": "Nova Team",
         "subtitle": "les créateurs de l'excellence digitale. De l’idée au code – nous concevons et développons des sites à impact.",
         "text": "Votre vision est notre mission",
@@ -154,6 +154,12 @@
         },
         "TAR": {
             "description": "Site commercial pour une société allemande de mesure thermique. Développé avec HTML, CSS et JS. Design moderne et responsive, actuellement en aperçu."
+        },
+        "Kingsman": {
+            "description": "Boutique e-commerce conceptuelle de costumes et accessoires pour homme. Landing page élégante et stylée, inspirée de l’esthétique de Kingsman. Développée de zéro en HTML, CSS et JavaScript."
+        },
+        "Dobrozem": {
+            "description": "Landing page commerciale d’une seule page pour une entreprise foncière. Site web propre, rapide et informatif, créé pour soutenir une campagne de webinaire. Construit avec HTML, CSS, JavaScript et Django, entièrement responsive et prêt pour le client."
         }
     }
 }

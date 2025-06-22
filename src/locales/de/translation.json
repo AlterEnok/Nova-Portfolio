@@ -33,7 +33,7 @@
         }
     },
     "header": {
-        "titleStrong": "Wir sind agentur",
+        "titleStrong": "Wir sind studio",
         "titleEm": "Nova Team",
         "subtitle": "die Schöpfer digitaler Exzellenz. Von der Idee bis zum Code – wir gestalten und entwickeln Websites mit Wirkung.",
         "text": "Ihre Vision ist unsere Mission",
@@ -154,6 +154,12 @@
         },
         "TAR": {
             "description": "Kommerzielle Website für ein deutsches Wärmemessunternehmen. Komplett mit HTML, CSS und JS entwickelt. Modernes Design, responsive und aktuell in der Vorschau verfügbar."
+        },
+        "Kingsman": {
+            "description": "E-Commerce-Konzeptstore für Herrenanzüge und Accessoires. Stilvolles und elegantes Landingpage-Design, inspiriert von der Ästhetik von Kingsman. Von Grund auf mit HTML, CSS und JavaScript umgesetzt."
+        },
+        "Dobrozem": {
+            "description": "Einseitige kommerzielle Landingpage für ein Bodenunternehmen. Saubere, schnelle und informative Website, erstellt zur Unterstützung einer Webinar-Kampagne. Erstellt mit HTML, CSS, JavaScript und Django – vollständig responsiv und einsatzbereit für den Kunden."
         }
     }
 }
