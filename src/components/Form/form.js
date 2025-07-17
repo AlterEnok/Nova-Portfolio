@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import 'intl-tel-input/build/css/intlTelInput.css';
 import "./form.css";
 
-const ContactForm = ({ isOpen, setIsOpen }) => {
+const ContactForm = ({ isOpen, setIsOpen, className }) => {
     const [showSuccess, setShowSuccess] = useState(false);
     const { t } = useTranslation();
     const phoneInputRef = useRef(null);
@@ -33,7 +33,7 @@ const ContactForm = ({ isOpen, setIsOpen }) => {
     }, [isOpen]);
 
     return (
-        <section className="contact-section">
+        <section className={`contact-section ${className || ''}`}>
             <div className="contact-trigger" onClick={() => setIsOpen(true)}>
                 <span className="line top-line" />
                 <div className="trigger-content">

@@ -9,7 +9,6 @@ import Form from './../components/Form/form.js';
 import CustomCursor from './../components/Cursor/cursor.js';
 import ScrollTop from './../components/ScrollTop/scroll.js';
 import AnimatedPage from '../components/SmoothPage/smooth.js';
-import Lenis from '../components/useLenis.js';
 import 'intl-tel-input/build/css/intlTelInput.css';
 
 

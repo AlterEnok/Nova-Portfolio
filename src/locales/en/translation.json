@@ -4,11 +4,11 @@
     "contacts": "Contacts",
     "poweringProjects": "Powering Projects with",
     "frontendTitle": "Frontend",
-    "frontendText": "We develop responsive, high-performance interfaces using HTML, CSS, JavaScript, and React. Our approach ensures fast loading, smooth animations, and compatibility across devices and browsers. We can also deliver sites on WordPress and Shopify.",
+    "frontendText": "We build responsive, high-performance frontends with HTML, CSS, JavaScript, and React. Focused on speed, accessibility, and cross-device consistency, we deliver fast load times and pixel-perfect layouts. We create custom interfaces or Shopify solutions, optimizing code for SEO and easy backend integration. From landing pages to e-commerce and web apps — we craft intuitive, engaging user experiences.",
     "backendTitle": "Backend",
-    "backendText": "We develop secure and scalable backends using Node.js, PHP, Laravel, and MySQL. Whether it's handling user authentication, databases, or custom APIs — we ensure the system runs reliably. Integrations with CMS or custom admin panels are also available.",
+    "backendText": "We build scalable backend solutions with Django, FastAPI, Node.js, PHP, and Laravel. Our services include JWT authentication, database integrations (PostgreSQL, MySQL), and REST or GraphQL APIs. We integrate CMS platforms or create custom admin panels. For high-load systems, we design microservices with Kubernetes to ensure flexibility, fault tolerance, and scalability — from MVPs to enterprise platforms.",
     "uiuxTitle": "UI/UX",
-    "uiuxText": "We design modern and user-friendly interfaces in Figma and Adobe XD, paying special attention to user flows, accessibility, and visual consistency. Whether it’s a landing page or a full product UI — we create experiences that convert.",
+    "uiuxText": "We design modern, user-friendly interfaces using Figma and Adobe XD, focusing on clear user flows, accessibility, and visual consistency. Whether it’s a landing page or full product UI, we create intuitive, minimalist designs that engage users and drive conversions.",
     "workflow": "Our Workflow",
     "steps": {
         "1": {

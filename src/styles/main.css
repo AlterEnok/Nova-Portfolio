@@ -25,7 +25,7 @@
 	--footer-text: var(--white);
 
 	/* Light mode */
-	--page-bg: var(--white);
+	--page-bg: linear-gradient(to right, #ffffff, #999999);
 	--text-color: var(--black);
 	--accent: var(--purple);
 	--title-1: var(--accent);
@@ -37,7 +37,7 @@
 
 .dark {
 	/* Dark mode */
-	--page-bg: #252526;
+	--page-bg: linear-gradient(to bottom, #0e0e0e, #1c1c1c);
 	--text-color: var(--white);
 
 	--title-1: #fff;
@@ -62,8 +62,7 @@ body {
 	letter-spacing: -0.5px;
 
 	/* Light mode */
-	background-color: var(--page-bg);
-	color: var(--text-color);
+	background: var(--page-bg);
 }
 
 /* General */
@@ -73,9 +72,6 @@ body {
 	padding: 0 15px;
 	max-width: 1400px;
 }
-
-
-
 
 
 
@@ -91,9 +87,7 @@ body {
 	pointer-events: none;
 	z-index: 9999;
 	transition: background-color 0.3s, transform 0.15s ease-out;
-
 }
-
 
 
 
@@ -116,7 +110,6 @@ body {
 
 body.dark .title-1 {
 	color: #ffffff;
-	/* белый в тёмной теме */
 }
 
 .title-2 {
@@ -126,15 +119,6 @@ body.dark .title-1 {
 	font-weight: 700;
 	line-height: 1.3;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -238,7 +222,7 @@ body.dark .title-1 {
 
 .project-details__desc {
 	margin-bottom: 30px;
-
+	color: var(--text-color);
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 1.3;
@@ -269,7 +253,7 @@ body.dark .contacts-modern__title {
 }
 
 body.dark .contacts-modern__card h3 {
-	color: #6a00ff;
+	color: #975aed;
 }
 
 body.dark .contacts-modern__card a,
@@ -278,12 +262,12 @@ body.dark .contacts-modern__card p {
 }
 
 body.dark .contacts-modern__card a:hover {
-	color: #b300ff;
+	color: #a56ef3;
 }
 
 
 body.light .contacts-modern__title {
-	color: #b300ff;
+	color: #a56ef3 !important;
 }
 
 .contacts-modern__title {
@@ -314,7 +298,8 @@ body.light .contacts-modern__title {
 
 .contacts-modern__card {
 	background: rgba(255, 255, 255, 0.05);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1.5px solid #7170AF;
+	-webkit-backdrop-filter: blur(12px);
 	backdrop-filter: blur(12px);
 	border-radius: 20px;
 	padding: 30px;
@@ -329,14 +314,12 @@ body.light .contacts-modern__card {
 	border: 1px solid #ccc;
 	color: #000;
 	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-	/* Увеличена тень */
 	transition: 0.3s ease;
 }
 
 body.light .contacts-modern__card:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 12px 30px rgba(179, 0, 255, 0.2);
-	/* hover-эффект остаётся ярким */
 }
 
 
@@ -460,13 +443,11 @@ body.light .contacts-modern__glow {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding-left: 60px;
-	/* отступ слева для текста */
 }
 
 .process__line {
 	position: absolute;
 	left: 40px;
-	/* ставим линию ближе к цифрам */
 	top: 0;
 	bottom: 0;
 	width: 3px;
@@ -489,7 +470,6 @@ body.light .contacts-modern__glow {
 	gap: 20px;
 	text-align: left;
 	margin-left: 40px;
-	/* чтобы текст не налезал на линию */
 }
 
 .process__number {
@@ -507,7 +487,6 @@ body.light .contacts-modern__glow {
 	position: relative;
 	z-index: 2;
 	margin-left: -52px;
-	/* сдвигаем кружок влево — поверх линии */
 }
 
 .process__content {
@@ -591,9 +570,6 @@ body.light .contacts-modern__glow {
 
 
 
-
-
-
 /* CONTACT */
 
 .contact-section {
@@ -602,6 +578,10 @@ body.light .contacts-modern__glow {
 	background: transparent;
 	color: white;
 	overflow: hidden;
+}
+
+.contact-page-form {
+	margin-bottom: 20px;
 }
 
 .contact-trigger {
@@ -839,13 +819,9 @@ button[type="submit"] {
 
 .iti input {
 	color: #000;
-	/* Цвет текста */
 	font-size: 16px;
-	/* Размер шрифта */
 	background: transparent;
-	/* Без фона, если фон у родителя */
 	caret-color: white;
-	/* Цвет курсора */
 }
 
 .iti input.iti__tel-input,
@@ -922,7 +898,6 @@ button[type="submit"] {
 		left: 0;
 		height: 100vh;
 		width: 100vw;
-		/* background: linear-gradient(to bottom, #6a00ff, #b300ff); */
 		background: #0f0c1d;
 		backdrop-filter: blur(6px);
 		flex-direction: column;
@@ -1012,6 +987,9 @@ button[type="submit"] {
 		touch-action: none;
 	}
 
+	.skills {
+		gap: 60px;
+	}
 
 	/* General */
 

@@ -4,11 +4,11 @@
     "contacts": "Contact",
     "poweringProjects": "Des projets boostés par",
     "frontendTitle": "Frontend",
-    "frontendText": "Nous développons des interfaces utilisateur réactives et performantes avec HTML, CSS, JavaScript et React. Notre approche garantit des temps de chargement rapides, des animations fluides et une compatibilité multiplateforme. Les sites WordPress sont également possibles et shopify.",
+    "frontendText": "Nous développons des interfaces frontend réactives et performantes avec HTML, CSS, JavaScript et React. Axés sur la vitesse, l’accessibilité et la cohérence multi-appareils, nous garantissons des temps de chargement rapides et des mises en page au pixel près. Nous créons des interfaces sur mesure ou des solutions Shopify, en optimisant le code pour le SEO et une intégration backend simplifiée. Des landing pages aux sites e-commerce et applications web — nous concevons des expériences utilisateur intuitives et engageantes.",
     "backendTitle": "Backend",
-    "backendText": "Nous créons des backends sécurisés et évolutifs avec Node.js, PHP, Laravel et MySQL. Authentification, bases de données ou API personnalisées – nous assurons des systèmes fiables. Intégrations CMS ou panneaux d'administration inclus.",
+    "backendText": "Nous concevons des solutions backend évolutives avec Django, FastAPI, Node.js, PHP et Laravel. Nos services incluent l’authentification JWT, l’intégration de bases de données (PostgreSQL, MySQL) et des API REST ou GraphQL. Nous intégrons des CMS ou créons des panneaux d’administration sur mesure. Pour les systèmes à forte charge, nous mettons en place des microservices avec Kubernetes afin d’assurer flexibilité, tolérance aux pannes et scalabilité — du MVP aux plateformes d’entreprise.",
     "uiuxTitle": "UI/UX",
-    "uiuxText": "Nous concevons des interfaces modernes et conviviales avec Figma et Adobe XD, en mettant l’accent sur l’ergonomie, l’accessibilité et la cohérence visuelle. De la landing page à l’interface produit complète – nous créons des expériences convaincantes.",
+    "uiuxText": "Nous concevons des interfaces modernes et conviviales avec Figma et Adobe XD, en nous concentrant sur des parcours utilisateur clairs, l’accessibilité et la cohérence visuelle. Qu’il s’agisse d’une landing page ou de l’interface complète d’un produit, nous créons des designs intuitifs et minimalistes qui captivent les utilisateurs et stimulent les conversions.",
     "workflow": "Notre processus de travail",
     "steps": {
         "1": {

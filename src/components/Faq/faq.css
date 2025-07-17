@@ -42,7 +42,7 @@
     inset: 0;
     border-radius: 16px;
     padding: 2px;
-    background: linear-gradient(to right, #6a00ff, #b300ff);
+    background: linear-gradient(to right, #7a44c6, #8614b7);
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -53,7 +53,7 @@
 }
 
 .faq__item:hover {
-    box-shadow: 0 0 18px rgba(179, 0, 255, 0.4);
+    box-shadow: 0 0 18px rgba(116, 7, 163, 0.4);
 }
 
 .faq__question {
@@ -80,5 +80,5 @@
 }
 
 .faq__item.active .faq__question {
-    color: #b300ff;
+    color: #d283f5;
 }

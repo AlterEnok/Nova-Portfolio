@@ -23,6 +23,7 @@
     perspective: 1000px;
 }
 
+
 .skills__card {
     position: relative;
     background: var(--project-card-bg);
@@ -32,9 +33,10 @@
     text-align: center;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     transform-style: preserve-3d;
-    transition: transform 0.2s ease;
+    transition: transform 0.15s ease, box-shadow 0.3s ease;
     will-change: transform;
     overflow: hidden;
+    transform: perspective(600px) rotateX(0deg) rotateY(0deg) scale(1);
 }
 
 .card__glow {
@@ -47,6 +49,8 @@
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 60%);
     pointer-events: none;
     z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .skills__card:hover .card__glow {
@@ -59,7 +63,7 @@
 }
 
 .skills__card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     outline: 3px solid var(--purple);
 }

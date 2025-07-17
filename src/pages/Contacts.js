@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import AnimatedPage from '../components/SmoothPage/smooth.js';
 import Sparkle from '../components/Sparkle/sparkle.js';
+import ContactForm from '../components/Form/form.js';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Contacts = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    // Пример обработчика, если хочешь открыть/закрыть меню (для теста)
-    // По факту ты можешь передать сюда реальный стейт из бургер-меню
-    const toggleMenu = () => setIsMenuOpen(prev => !prev);
+    const [isFormOpen, setIsFormOpen] = useState(false);
 
     return (
         <AnimatedPage>
@@ -46,10 +44,14 @@ const Contacts = () => {
                         <a href="mailto:novateam.web@gmail.com">novateam.web@gmail.com</a>
                     </div>
                 </div>
-
-
-
             </section>
+
+
+            <ContactForm
+                isOpen={isFormOpen}
+                setIsOpen={setIsFormOpen}
+                className="contact-page-form"
+            />
 
             <Sparkle hidden={isMenuOpen} />
         </AnimatedPage>

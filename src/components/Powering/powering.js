@@ -28,26 +28,36 @@ const Powering = () => {
     };
 
 
-    // === 3D Effect Logic ===
+    let animationFrameId = null;
+
     const handleMouseMove = (e) => {
         const card = e.currentTarget;
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+        }
 
-        const rotateX = -(y - centerY) / 12;
-        const rotateY = (x - centerX) / 12;
+        animationFrameId = requestAnimationFrame(() => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
 
-        card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            const rotateX = -(y - centerY) / 12;
+            const rotateY = (x - centerX) / 12;
+
+            card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
     };
 
     const handleMouseLeave = (e) => {
         const card = e.currentTarget;
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+        }
         card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
     };
-    // === End of 3D logic ===
+    // === End optimized 3D logic ===
 
     return (
         <div ref={ref}>
