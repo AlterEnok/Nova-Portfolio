@@ -843,7 +843,13 @@ button[type="submit"] {
 	outline: none;
 }
 
-
+@media (min-width: 1900px) and (max-width: 3500px) {
+	.contact-page-form {
+		position: relative;
+		top: -15dvh;
+		margin-bottom: 0;
+	}
+}
 
 @media (max-width: 768px) {
 	/* Header  */
