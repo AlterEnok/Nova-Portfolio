@@ -33,9 +33,8 @@
         }
     },
     "header": {
-        "titleStrong": "We are studio",
         "titleEm": "Nova Team",
-        "subtitle": "the creators of digital excellence. From concept to code, we design and develop websites that make a difference.",
+        "subtitle": "We are a Ukrainian web development studio. From unique design to clean code – we deliver full-service websites! Your business deserves a fast start – hit the button and let’s go!",
         "text": "Your vision, is our mission",
         "btn": "See Projects"
     },
@@ -108,6 +107,7 @@
         "email": "Your Email",
         "phone": "Phone Number",
         "message": "Message (optional)",
+        "messenger": "Telegram / Viber / WhatsApp",
         "siteTypeTitle": "What type of site do you need?",
         "send": "Send",
         "success": "Thanks! Your message has been sent. Please wait for a reply.",
@@ -116,7 +116,12 @@
             "corporate": "Corporate",
             "ecommerce": "E-commerce",
             "undecided": "Undecided"
-        }
+        },
+        "captchaError": "Please confirm that you are not a robot"
+    },
+    "notification": {
+        "text": "Not sure what to choose? <1>Fill out the form</1> — and we’ll get in touch!",
+        "button": "Fill Out"
     },
     "projectss": {
         "tesla": {
@@ -160,6 +165,9 @@
         },
         "Dobrozem": {
             "description": "One-page commercial landing for a land company. Clean, fast, and informative website created to support a webinar campaign. Built with HTML, CSS, JavaScript and Django, fully responsive and client-ready."
+        },
+        "Roslyna": {
+            "description": "Ідея онлайн-магазину з товарами з Карпатського регіону. Створений концепт сайту з сучасним дизайном і зручною навігацією. Використано React, TypeScript і Django. Повністю адаптивний, розроблений з думкою про подальшу інтеграцію реальних товарів і функціоналу кошика."
         }
     }
 }

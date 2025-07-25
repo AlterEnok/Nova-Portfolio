@@ -1,0 +1,133 @@
+.notification-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    padding: 14px 20px 14px 16px;
+    border-radius: 18px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    max-width: 600px;
+    width: calc(100% - 40px);
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.notification-banner.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%, 30px);
+    }
+}
+
+.notification-icon {
+    font-size: 20px;
+}
+
+.notification-banner p {
+    margin: 0;
+    color: #333;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.notification-action {
+    background: #915eff;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.notification-action:hover {
+    background: #6e33ff;
+}
+
+.notification-close {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.3s ease;
+}
+
+.notification-close:hover {
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 768x) {
+    .notification-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 14px;
+        gap: 10px;
+        font-size: 14px;
+        width: calc(100% - 24px);
+        border-radius: 14px;
+    }
+
+    .notification-banner p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .notification-action {
+        width: 100%;
+        text-align: center;
+        padding: 10px 12px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .notification-close {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        font-size: 20px;
+    }
+}

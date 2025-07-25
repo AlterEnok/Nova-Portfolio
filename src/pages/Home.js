@@ -1,26 +1,18 @@
-import { useState } from 'react';
 import Header from './../components/header/Header';
 import Powering from './../components/Powering/powering';
 import Processing from './../components/Processing/processing';
-// import Partners from './../components/Partners/partners';
 import Faq from './../components/Faq/faq';
 import Why from './../components/Why/why.js';
 import Form from './../components/Form/form.js';
-import CustomCursor from './../components/Cursor/cursor.js';
 import ScrollTop from './../components/ScrollTop/scroll.js';
 import AnimatedPage from '../components/SmoothPage/smooth.js';
 import 'intl-tel-input/build/css/intlTelInput.css';
 
-
-
-const Home = () => {
-    const [isFormOpen, setIsFormOpen] = useState(false);
+const Home = ({ isFormOpen, setIsFormOpen }) => {
     return (
-
         <>
-            <AnimatedPage >
+            <AnimatedPage>
                 <div data-lenis-scroll>
-                    <CustomCursor />
                     <Header />
                     <main className="section">
                         <div className="section-divider">
@@ -67,19 +59,15 @@ const Home = () => {
                                 />
                             </svg>
                         </div>
+
                         <div className="container">
-                            <div className="parallax" data-speed="2"> {/* Элемент с параллаксом */}
+                            <div className="parallax" data-speed="2">
                                 <Powering />
                             </div>
 
                             <div className="parallax" data-speed="1.5">
                                 <Processing />
                             </div>
-
-                            {/* <div className="parallax" data-speed="3">
-                                <Partners />
-                            </div> */}
-
 
                             <div className="parallax" data-speed="1">
                                 <Faq />
@@ -88,11 +76,8 @@ const Home = () => {
                             <div className="parallax" data-speed="2.5">
                                 <Why />
                             </div>
-
-
-
-
                         </div>
+
                         <div className="section-divider">
                             <svg
                                 className="wave-lines"
@@ -136,13 +121,13 @@ const Home = () => {
                                     className="wave wave-4"
                                 />
                             </svg>
-
                         </div>
 
-
+                        {/* Форма из App перед футером */}
                         <Form isOpen={isFormOpen} setIsOpen={setIsFormOpen} />
-
                     </main>
+
+                    {/* Скрываем ScrollTop при открытой форме */}
                     <ScrollTop hide={isFormOpen} />
                 </div>
             </AnimatedPage>

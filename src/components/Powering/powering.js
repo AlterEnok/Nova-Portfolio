@@ -8,6 +8,7 @@ const Powering = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: '-100px' });
     const controls = useAnimation();
+    const animationFrameId = useRef(null);
 
     useEffect(() => {
         if (isInView) {
@@ -27,16 +28,14 @@ const Powering = () => {
         }),
     };
 
-
-    let animationFrameId = null;
-
     const handleMouseMove = (e) => {
         const card = e.currentTarget;
-        if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
+
+        if (animationFrameId.current) {
+            cancelAnimationFrame(animationFrameId.current);
         }
 
-        animationFrameId = requestAnimationFrame(() => {
+        animationFrameId.current = requestAnimationFrame(() => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
@@ -52,41 +51,46 @@ const Powering = () => {
 
     const handleMouseLeave = (e) => {
         const card = e.currentTarget;
-        if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
+        if (animationFrameId.current) {
+            cancelAnimationFrame(animationFrameId.current);
         }
         card.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg) scale(1)';
     };
-    // === End optimized 3D logic ===
+
+    const cards = [
+        {
+            icon: "frontend.png",
+            title: t("frontendTitle"),
+            text: t("frontendText"),
+        },
+        {
+            icon: "backend.png",
+            title: t("backendTitle"),
+            text: t("backendText"),
+        },
+        {
+            icon: "ux.png",
+            title: t("uiuxTitle"),
+            text: t("uiuxText"),
+        },
+    ];
 
     return (
-        <div ref={ref}>
+        <section ref={ref} aria-label={t("poweringProjects")} className="powering-section">
             <motion.h2
                 className="section__title"
                 initial="hidden"
                 animate={controls}
                 variants={{
                     hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
                 }}
             >
                 {t("poweringProjects")}
             </motion.h2>
 
             <div className="skills">
-                {[{
-                    icon: "frontend.png",
-                    title: t("frontendTitle"),
-                    text: t("frontendText")
-                }, {
-                    icon: "backend.png",
-                    title: t("backendTitle"),
-                    text: t("backendText")
-                }, {
-                    icon: "ux.png",
-                    title: t("uiuxTitle"),
-                    text: t("uiuxText")
-                }].map((card, i) => (
+                {cards.map((card, i) => (
                     <motion.div
                         key={i}
                         className="skills__card"
@@ -96,18 +100,20 @@ const Powering = () => {
                         variants={itemVariant}
                         onMouseMove={handleMouseMove}
                         onMouseLeave={handleMouseLeave}
+                        role="article"
                     >
                         <img
-                            src={`${process.env.PUBLIC_URL}/icons/${card.icon}`}
-                            alt={`${card.title} Icon`}
+                            src={`${process.env.PUBLIC_URL || ''}/icons/${card.icon}`}
+                            alt={`${card.title} icon`}
                             className="skills__icon"
+                            loading="lazy"
                         />
                         <h2 className="skills__title">{card.title}</h2>
                         <p className="skills__text">{card.text}</p>
                     </motion.div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

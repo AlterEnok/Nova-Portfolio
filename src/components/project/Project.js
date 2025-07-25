@@ -25,7 +25,7 @@ const Project = ({ title, img, id, technologies, index = 0 }) => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
         };
-        handleResize(); // Устанавливаем начальное значение
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);

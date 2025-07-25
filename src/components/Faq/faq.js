@@ -11,8 +11,6 @@ const Faq = () => {
         setActiveIndex(activeIndex === index ? null : index);
     };
 
-
-
     const faqs = [
         {
             question: t("faq.1.question"),

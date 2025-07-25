@@ -33,10 +33,9 @@
         }
     },
     "header": {
-        "titleStrong": "Wir sind studio",
         "titleEm": "Nova Team",
-        "subtitle": "die Schöpfer digitaler Exzellenz. Von der Idee bis zum Code – wir gestalten und entwickeln Websites mit Wirkung.",
-        "text": "Ihre Vision ist unsere Mission",
+        "subtitle": "Wir sind ein ukrainisches Webentwicklungsstudio. Von einzigartigem Design bis zu sauberem Code – wir liefern alles aus einer Hand! Dein Business verdient einen schnellen Start – klick den Button und los geht’s!",
+        "text": "Deine Vision ist unsere Mission",
         "btn": "Projekte ansehen"
     },
     "faq": {
@@ -108,6 +107,7 @@
         "email": "Ihre E-Mail",
         "phone": "Telefonnummer",
         "message": "Nachricht (optional)",
+        "messenger": "Telegram / Viber / WhatsApp",
         "siteTypeTitle": "Welche Art von Website benötigen Sie?",
         "send": "Senden",
         "success": "Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns bald.",
@@ -116,7 +116,12 @@
             "corporate": "Unternehmensseite",
             "ecommerce": "E-Commerce",
             "undecided": "Unentschlossen"
-        }
+        },
+        "captchaError": "Bitte bestätigen Sie, dass Sie kein Roboter sind"
+    },
+    "notification": {
+        "text": "Sie wissen nicht, was Sie wählen sollen? <1>Füllen Sie das Formular aus</1> – wir melden uns bei Ihnen!",
+        "button": "Ausfüllen"
     },
     "projectss": {
         "tesla": {
@@ -160,6 +165,9 @@
         },
         "Dobrozem": {
             "description": "Einseitige kommerzielle Landingpage für ein Bodenunternehmen. Saubere, schnelle und informative Website, erstellt zur Unterstützung einer Webinar-Kampagne. Erstellt mit HTML, CSS, JavaScript und Django – vollständig responsiv und einsatzbereit für den Kunden."
+        },
+        "Roslyna": {
+            "description": "Eine Online-Shop-Idee mit Produkten aus der Karpatenregion. Ein Konzept der Website mit modernem Design und benutzerfreundlicher Navigation wurde erstellt. Verwendet React, TypeScript und Django. Vollständig responsiv und mit Blick auf die zukünftige Integration realer Produkte und Warenkorbfunktionen entwickelt."
         }
     }
 }

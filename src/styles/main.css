@@ -124,51 +124,24 @@ body.dark .title-1 {
 
 /* Btn */
 
-.btn {
-	display: inline-block;
-	height: 48px;
-	padding: 12px 28px;
-
-	border-radius: 5px;
-	background-color: var(--accent);
-	color: var(--white);
-	letter-spacing: 0.15px;
-	font-size: 16px;
-	font-weight: 500;
-
-	transition: opacity 0.2s ease-in;
-}
-
-.btn:hover {
-	opacity: 0.8;
-}
-
-.btn:active {
-	position: relative;
-	top: 1px;
-}
-
-/* Btn outline */
-
 .btn-outline {
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-
 	height: 48px;
 	padding: 12px 20px;
-
 	border-radius: 5px;
-	border: 1px solid #171718;
-	background-color: transparent;
-	color: #ccc;
+	border: 1px solid #6a00ff;
 
+	background-color: transparent;
+	color: fff;
 	font-weight: 600;
 	text-decoration: none;
 	transition: color 0.4s ease;
 	z-index: 1;
 	cursor: pointer;
 }
+
 
 .btn-outline::before {
 	content: "";
@@ -182,15 +155,31 @@ body.dark .title-1 {
 	transition: left 0.4s ease;
 }
 
+
 .btn-outline:hover::before {
 	left: 0;
 }
+
 
 .btn-outline:hover {
 	color: #fff;
 }
 
-.btn-outline span {
+body.light-theme .btn-outline {
+	border: 1px solid #f3ecec;
+	color: #171718;
+
+}
+
+
+body.dark-theme .btn-outline {
+	border: 1px solid #cf1a1a;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+body .btn-outline span {
 	position: relative;
 	z-index: 1;
 }

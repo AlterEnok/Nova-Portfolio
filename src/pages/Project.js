@@ -3,25 +3,22 @@ import { projects } from './../helpers/projectsList';
 import BtnGitHub from '../components/btnGitHub/BtnGitHub';
 import { motion } from 'framer-motion';
 import Sparkle from '../components/Sparkle/sparkle.js';
-import { useTranslation } from 'react-i18next';  // Импортируем хук
+import { useTranslation } from 'react-i18next';
 
 const Project = () => {
     const { id } = useParams();
-    const { t } = useTranslation();  // Получаем функцию для перевода
-    console.log(id);  // Проверяем, что за id передаётся
+    const { t } = useTranslation();
+    console.log(id);
 
     const project = projects[id];
 
     return (
-
         <motion.div
-
             className="container"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
         >
-
             <motion.div
                 className="project-details"
                 initial={{ opacity: 0 }}
@@ -52,7 +49,7 @@ const Project = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
                 >
-                    <p>{t(project.descriptionKey)}</p>  {/* Используем ключ перевода */}
+                    <p>{t(project.descriptionKey)}</p>
                 </motion.div>
 
                 {project.gitHubLink && (
@@ -61,18 +58,13 @@ const Project = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6, duration: 0.4 }}
                     >
-                        <BtnGitHub link={project.gitHubLink} />
-
+                        <BtnGitHub link={project.gitHubLink} /> {/* Вставка кнопки с линком на GitHub */}
                     </motion.div>
-
                 )}
                 <Sparkle />
             </motion.div>
         </motion.div>
-
     );
-
 }
-
 
 export default Project;

@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Project from '../components/project/Project';
 import { projects } from '../helpers/projectsList';
 import AnimatedPage from '../components/SmoothPage/smooth.js';
 import Sparkle from '../components/Sparkle/sparkle.js';
+import ContactForm from '../components/Form/form.js'; // ⬅️ Импорт формы
 import { motion } from 'framer-motion';
 
-
 const Projects = () => {
+    const [isFormOpen, setIsFormOpen] = useState(false); // ⬅️ Состояние формы
     const conceptProjects = projects.filter(p => p.type !== 'commercial');
     const commercialProjects = projects.filter(p => p.type === 'commercial');
 
@@ -36,7 +37,6 @@ const Projects = () => {
                         ))}
                     </ul>
 
-
                     {commercialProjects.length > 0 && (
                         <>
                             <motion.h2
@@ -61,14 +61,19 @@ const Projects = () => {
                                     />
                                 ))}
                             </ul>
-
                         </>
                     )}
-
                 </div>
-
             </main>
-            <Sparkle />
+
+
+            <ContactForm
+                isOpen={isFormOpen}
+                setIsOpen={setIsFormOpen}
+                className="contact-page-form"
+            />
+
+            <Sparkle hidden={isFormOpen} />
         </AnimatedPage>
     );
 };

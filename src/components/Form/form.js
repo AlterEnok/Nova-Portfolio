@@ -1,29 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import intlTelInput from 'intl-tel-input';
 import { useTranslation } from 'react-i18next';
-import 'intl-tel-input/build/css/intlTelInput.css';
-import "./form.css";
+import './form.css';
+import i18n from '../../i18n';
 
 const ContactForm = ({ isOpen, setIsOpen, className }) => {
     const [showSuccess, setShowSuccess] = useState(false);
+    const [recaptchaError, setRecaptchaError] = useState(false);
     const { t } = useTranslation();
-    const phoneInputRef = useRef(null);
 
     useEffect(() => {
-        if (isOpen && phoneInputRef.current) {
-            const iti = intlTelInput(phoneInputRef.current, {
-                initialCountry: "auto",
-                preferredCountries: ["ua", "us", "de", "fr", "gb", "pl"],
-                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-            });
-
-            return () => {
-                iti.destroy();
-            };
+        if (emailjs?.init) {
+            emailjs.init('service_y88mljp');
         }
-    }, [isOpen]);
+    }, []);
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : '';
@@ -31,6 +22,89 @@ const ContactForm = ({ isOpen, setIsOpen, className }) => {
             document.body.style.overflow = '';
         };
     }, [isOpen]);
+
+    useEffect(() => {
+        const scriptSrc = `https://www.google.com/recaptcha/api.js?hl=${i18n.language}&render=explicit`;
+        const existingScript = document.querySelector(`script[src="${scriptSrc}"]`);
+
+        const initRecaptcha = () => {
+            if (window.grecaptcha?.ready) {
+                window.grecaptcha.ready(() => {
+                    try {
+                        const recaptchaContainer = document.getElementById('recaptcha-container');
+                        if (recaptchaContainer && !recaptchaContainer.hasChildNodes() && !recaptchaContainer.dataset.rendered) {
+                            const widgetId = window.grecaptcha.render(recaptchaContainer, {
+                                sitekey: '6Ldo84wrAAAAAIINUqXYDWG3aSWboQZ2r0-PlOsv',
+                                callback: () => setRecaptchaError(false),
+                            });
+                            recaptchaContainer.dataset.rendered = widgetId;
+                        }
+                    } catch (e) {
+                        console.error('reCAPTCHA render error:', e);
+                    }
+                });
+            }
+        };
+
+        if (!existingScript) {
+            const script = document.createElement('script');
+            script.src = scriptSrc;
+            script.async = true;
+            script.defer = true;
+
+            script.onload = () => {
+                if (isOpen) {
+                    initRecaptcha();
+                }
+            };
+
+            script.onerror = () => {
+                console.error('Failed to load reCAPTCHA script');
+            };
+
+            document.body.appendChild(script);
+        } else if (isOpen) {
+            initRecaptcha();
+        }
+    }, [i18n.language, isOpen]);
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const token = window.grecaptcha?.getResponse();
+        if (!token) {
+            setRecaptchaError(true);
+            return;
+        }
+
+        try {
+            const recaptchaInput = document.createElement("input");
+            recaptchaInput.setAttribute("type", "hidden");
+            recaptchaInput.setAttribute("name", "g-recaptcha-response");
+            recaptchaInput.setAttribute("value", token);
+            e.target.appendChild(recaptchaInput);
+
+            await emailjs.sendForm(
+                'service_y88mljp',
+                'template_k5o707u',
+                e.target,
+                'dmrmfHqqqzuU-j2DT'
+            );
+
+            setShowSuccess(true);
+            setTimeout(() => setShowSuccess(false), 4000);
+            e.target.reset();
+            setIsOpen(false);
+
+            if (window.grecaptcha?.reset) {
+                window.grecaptcha.reset();
+            }
+        } catch (err) {
+            console.error("EmailJS Error:", err);
+            alert("Произошла ошибка при отправке формы. Попробуйте позже.");
+        }
+    };
 
     return (
         <section className={`contact-section ${className || ''}`}>
@@ -58,29 +132,12 @@ const ContactForm = ({ isOpen, setIsOpen, className }) => {
                             <h2>{t("form.title")}</h2>
                             <p>{t("form.subtitle")}</p>
 
-                            <form
-                                onSubmit={(e) => {
-                                    e.preventDefault();
-                                    emailjs.sendForm(
-                                        'service_y88mljp',
-                                        'template_k5o707u',
-                                        e.target,
-                                        'dmrmfHqqqzuU-j2DT'
-                                    )
-                                        .then(() => {
-                                            setShowSuccess(true);
-                                            setTimeout(() => setShowSuccess(false), 4000);
-                                        })
-                                        .catch((err) => alert("Error: " + err.text));
-
-                                    e.target.reset();
-                                    setIsOpen(false);
-                                }}
-                            >
+                            <form onSubmit={handleSubmit}>
                                 <div className="input-grid">
                                     <input type="text" name="user_name" placeholder={t("form.name")} required />
                                     <input type="email" name="user_email" placeholder={t("form.email")} required />
-                                    <input ref={phoneInputRef} type="tel" name="phone" placeholder={t("form.phone")} required autoFocus={false} />
+                                    <input type="tel" name="phone" placeholder={t("form.phone")} required />
+                                    <input type="text" name="messenger" placeholder={t("form.messenger")} />
                                     <input type="text" name="message" placeholder={t("form.message")} />
                                 </div>
 
@@ -104,6 +161,16 @@ const ContactForm = ({ isOpen, setIsOpen, className }) => {
                                     </label>
                                 </div>
 
+                                <div
+                                    id="recaptcha-container"
+                                    className={`g-recaptcha ${recaptchaError ? 'recaptcha-error' : ''}`}
+                                ></div>
+                                {recaptchaError && (
+                                    <p className="recaptcha-error-text">
+                                        {t("form.captchaError")}
+                                    </p>
+                                )}
+
                                 <button type="submit">{t("form.send")}</button>
                             </form>
                         </div>
@@ -119,7 +186,7 @@ const ContactForm = ({ isOpen, setIsOpen, className }) => {
                                 <a href="https://t.me/The_Nova_Team" target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-telegram fa-2x"></i>
                                 </a>
-                                <a href="https://www.facebook.com/profile.php?id=61574733997236&notif_id=1743774084875024&notif_t=page_user_activity&ref=notif" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.facebook.com/profile.php?id=61574733997236" target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-facebook fa-2x"></i>
                                 </a>
                                 <a href="https://www.instagram.com/novateamweb/" target="_blank" rel="noopener noreferrer">

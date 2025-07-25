@@ -1,22 +1,31 @@
 import { useState, useEffect } from 'react';
 
 function getStorageValue(key, defaultValue) {
-    // getting stored value
     const saved = localStorage.getItem(key);
-    const initial = JSON.parse(saved);
-    return initial || defaultValue;
+    if (saved === null) return defaultValue;
+
+    try {
+        // Пробуем распарсить, если это валидный JSON
+        return JSON.parse(saved);
+    } catch (e) {
+        // Если парсинг не удался, значит это просто строка, возвращаем как есть
+        return saved;
+    }
 }
 
 export const useLocalStorage = (key, defaultValue) => {
-    const [value, setValue] = useState(() => {
-        return getStorageValue(key, defaultValue);
-    });
+    const [value, setValue] = useState(() => getStorageValue(key, defaultValue));
 
     useEffect(() => {
-        // storing input name
-        localStorage.setItem(key, JSON.stringify(value));
+        // При записи пытаемся сохранить строку или JSON
+        if (typeof value === 'string') {
+            localStorage.setItem(key, value);
+        } else {
+            localStorage.setItem(key, JSON.stringify(value));
+        }
     }, [key, value]);
 
     return [value, setValue];
 };
+
 export default useLocalStorage;

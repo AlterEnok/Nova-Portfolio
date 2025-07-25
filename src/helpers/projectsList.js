@@ -40,6 +40,9 @@ import project13Big from './../img/projects/13-big.jpg';
 import project14 from './../img/projects/14.jpg';
 import project14Big from './../img/projects/14-big.jpg';
 
+import project15 from './../img/projects/15.jpg';
+import project15Big from './../img/projects/15-big.jpg';
+
 const projects = [
     {
         id: '0',
@@ -180,6 +183,17 @@ const projects = [
         gitHubLink: 'https://dobrozem.land/',
         technologies: ['HTML', 'CSS', 'JS', 'DJANGO'],
         type: 'commercial'
+    },
+
+    {
+        id: '14',
+        title: 'Roslyna Karpat',
+        descriptionKey: 'projectss.Roslyna.description',// Ключ для перевода
+        img: project15,
+        imgBig: project15Big,
+        gitHubLink: 'https://alterenok.github.io/roslyna-shop/',
+        technologies: ['REACT', 'JSX', 'TYPESCRIPT', 'DJANGO'],
+        type: 'concept'
     }
 ];
 export { projects };

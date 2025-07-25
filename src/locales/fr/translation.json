@@ -33,9 +33,8 @@
         }
     },
     "header": {
-        "titleStrong": "Nous sommes studio",
         "titleEm": "Nova Team",
-        "subtitle": "les créateurs de l'excellence digitale. De l’idée au code – nous concevons et développons des sites à impact.",
+        "subtitle": "Nous sommes un studio ukrainien de développement web. Du design unique au code propre – nous faisons tout clé en main ! Votre entreprise mérite un démarrage rapide – cliquez sur le bouton et c’est parti !",
         "text": "Votre vision est notre mission",
         "btn": "Voir les projets"
     },
@@ -108,6 +107,7 @@
         "email": "Votre e-mail",
         "phone": "Numéro de téléphone",
         "message": "Message (optionnel)",
+        "messenger": "Telegram / Viber / WhatsApp",
         "siteTypeTitle": "Quel type de site web souhaitez-vous ?",
         "send": "Envoyer",
         "success": "Merci ! Votre message a été envoyé. Nous vous répondrons rapidement.",
@@ -116,7 +116,12 @@
             "corporate": "Site d'entreprise",
             "ecommerce": "E-commerce",
             "undecided": "Je ne sais pas encore"
-        }
+        },
+        "captchaError": "Veuillez confirmer que vous n'êtes pas un robot"
+    },
+    "notification": {
+        "text": "Vous ne savez pas quoi choisir ? <1>Remplissez le formulaire</1> — et nous vous contacterons !",
+        "button": "Remplir"
     },
     "projectss": {
         "tesla": {

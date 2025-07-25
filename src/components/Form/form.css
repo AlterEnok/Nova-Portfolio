@@ -191,18 +191,29 @@ body:not(.dark) .contact-trigger .trigger-content {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
+    position: relative;
+    top: -1dvh;
 }
 
 .popup-left h2 {
     font-size: 48px;
     font-weight: 700;
     margin: 0;
+    position: relative;
+    top: 4dvh;
+}
+
+@media (min-width: 1900px) and (max-width: 3500px) {
+    .popup-left h2 {
+        top: 1dvh;
+    }
 }
 
 .popup-left p {
     font-size: 18px;
     color: #ccc;
     margin: 0;
+
 }
 
 .input-grid {
@@ -348,7 +359,7 @@ button[type="submit"] {
 
     .site-type-options {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 10px;
         width: 100%;
     }

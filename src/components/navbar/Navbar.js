@@ -14,8 +14,9 @@ const Navbar = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     const dropdownRef = useRef(null);
+    const hoverTimeout = useRef(null);
     const { t, i18n } = useTranslation();
-    const [currentLang, setCurrentLang] = useLocalStorage('language', 'en');
+    const [currentLang, setCurrentLang] = useLocalStorage('language', 'ua');
 
     useEffect(() => {
         i18n.changeLanguage(currentLang);
@@ -48,8 +49,8 @@ const Navbar = () => {
                 setDropdownOpen(false);
             }
         };
-        document.addEventListener('click', handleClickOutside);
-        return () => document.removeEventListener('click', handleClickOutside);
+        document.addEventListener('mousedown', handleClickOutside); // безопаснее, чем click
+        return () => document.removeEventListener('mousedown', handleClickOutside);
     }, [dropdownOpen]);
 
     const changeLanguage = (lang) => {
@@ -62,18 +63,16 @@ const Navbar = () => {
     const activeLink = "nav-list__link nav-list__link--active";
 
     const LanguageDropdown = () => {
-        let timeoutId;
-
         const handleMouseEnter = () => {
             if (!isMobile) {
-                clearTimeout(timeoutId);
+                clearTimeout(hoverTimeout.current);
                 setDropdownOpen(true);
             }
         };
 
         const handleMouseLeave = () => {
             if (!isMobile) {
-                timeoutId = setTimeout(() => setDropdownOpen(false), 200);
+                hoverTimeout.current = setTimeout(() => setDropdownOpen(false), 200);
             }
         };
 
@@ -99,12 +98,13 @@ const Navbar = () => {
                         {currentLang.toUpperCase()}
                     </button>
                     <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-                        {currentLang !== 'en' && <div onClick={() => changeLanguage('en')}>EN</div>}
-                        {currentLang !== 'ua' && <div onClick={() => changeLanguage('ua')}>UA</div>}
-                        {currentLang !== 'de' && <div onClick={() => changeLanguage('de')}>DE</div>}
-                        {currentLang !== 'fr' && <div onClick={() => changeLanguage('fr')}>FR</div>}
-                        {currentLang !== 'es' && <div onClick={() => changeLanguage('es')}>ES</div>}
-                        {currentLang !== 'ru' && <div onClick={() => changeLanguage('ru')}>RU</div>}
+                        {['en', 'ua', 'de', 'fr', 'es', 'ru']
+                            .filter((lang) => lang !== currentLang)
+                            .map((lang) => (
+                                <div key={lang} onClick={() => changeLanguage(lang)}>
+                                    {lang.toUpperCase()}
+                                </div>
+                            ))}
                     </div>
                 </div>
             </div>
@@ -115,13 +115,13 @@ const Navbar = () => {
         <nav className={`nav ${showNavbar ? 'nav--visible' : 'nav--hidden'}`}>
             <div className="container">
                 <div className="nav-row">
-                    <NavLink to="/" className="logo">
+                    <NavLink to="/" className="logo" onClick={() => setMenuOpen(false)}>
                         <img src={logo} alt="Nova Team Logo" />
                     </NavLink>
 
                     <div
                         className={`burger ${menuOpen ? 'open' : ''}`}
-                        onClick={() => setMenuOpen(!menuOpen)}
+                        onClick={() => setMenuOpen(prev => !prev)}
                     >
                         <span></span>
                         <span></span>
