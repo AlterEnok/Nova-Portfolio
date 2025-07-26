@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Nova-Portfolio/static/css/main.46f91954.css",
-    "main.js": "/Nova-Portfolio/static/js/main.48b2810d.js",
+    "main.css": "/Nova-Portfolio/static/css/main.a1ca6a1b.css",
+    "main.js": "/Nova-Portfolio/static/js/main.16f64c32.js",
     "static/js/453.906b0208.chunk.js": "/Nova-Portfolio/static/js/453.906b0208.chunk.js",
     "static/media/01.png": "/Nova-Portfolio/static/media/01.6b64e3a20f75b694e5df.png",
     "static/media/12-big.jpg": "/Nova-Portfolio/static/media/12-big.bc9b5872f0c4c8ba09b1.jpg",
@@ -9,10 +9,12 @@
     "static/media/fa-solid-900.ttf": "/Nova-Portfolio/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/04-big.jpg": "/Nova-Portfolio/static/media/04-big.a2814fea63d5565f18d9.jpg",
     "static/media/04.jpg": "/Nova-Portfolio/static/media/04.e5989662c922bf5b19ed.jpg",
+    "static/media/15.jpg": "/Nova-Portfolio/static/media/15.1eb06dc2af267a31d754.jpg",
     "static/media/03.jpg": "/Nova-Portfolio/static/media/03.36b2447dd080edcf8f5d.jpg",
     "static/media/03-big.jpg": "/Nova-Portfolio/static/media/03-big.4b745b3a9caa9ec642e8.jpg",
     "static/media/05.jpg": "/Nova-Portfolio/static/media/05.a6a3bf6e7fddc618797b.jpg",
     "static/media/08-big.jpg": "/Nova-Portfolio/static/media/08-big.fb5d940904e8f893400b.jpg",
+    "static/media/15-big.jpg": "/Nova-Portfolio/static/media/15-big.4802c43d709aabf15b65.jpg",
     "static/media/fa-brands-400.ttf": "/Nova-Portfolio/static/media/fa-brands-400.1815e00441357e01619e.ttf",
     "static/media/09-big.jpg": "/Nova-Portfolio/static/media/09-big.9e04bd3b3bba03ce342c.jpg",
     "static/media/12.jpg": "/Nova-Portfolio/static/media/12.cbb7e53171a973ad792d.jpg",
@@ -47,12 +49,12 @@
     "static/media/globe@2x.webp": "/Nova-Portfolio/static/media/globe@2x.5dc7e51d6b5d42fc2be4.webp",
     "index.html": "/Nova-Portfolio/index.html",
     "static/media/globe.webp": "/Nova-Portfolio/static/media/globe.7fb216c936a98b90918e.webp",
-    "main.46f91954.css.map": "/Nova-Portfolio/static/css/main.46f91954.css.map",
-    "main.48b2810d.js.map": "/Nova-Portfolio/static/js/main.48b2810d.js.map",
+    "main.a1ca6a1b.css.map": "/Nova-Portfolio/static/css/main.a1ca6a1b.css.map",
+    "main.16f64c32.js.map": "/Nova-Portfolio/static/js/main.16f64c32.js.map",
     "453.906b0208.chunk.js.map": "/Nova-Portfolio/static/js/453.906b0208.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46f91954.css",
-    "static/js/main.48b2810d.js"
+    "static/css/main.a1ca6a1b.css",
+    "static/js/main.16f64c32.js"
   ]
 }
