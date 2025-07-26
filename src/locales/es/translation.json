@@ -36,7 +36,8 @@
         "titleEm": "Nova Team",
         "subtitle": "Somos un estudio ucraniano de desarrollo web. Desde un diseño único hasta un código limpio, ¡lo hacemos todo llave en mano! Tu negocio merece un inicio rápido – ¡haz clic y vamos allá!",
         "text": "Tu visión es nuestra misión",
-        "btn": "Ver proyectos"
+        "btn": "Ver proyectos",
+        "ctaBtn": "Enviar una solicitud"
     },
     "faq": {
         "title": "Preguntas frecuentes",

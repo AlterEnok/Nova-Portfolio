@@ -6,7 +6,7 @@ import * as THREE from "three";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
-const Header = () => {
+const Header = ({ setIsFormOpen }) => {
     const vantaRef = useRef(null);
     const [vantaEffect, setVantaEffect] = useState(null);
     const { t } = useTranslation();
@@ -67,15 +67,25 @@ const Header = () => {
                     <p>{t("header.text")}</p>
                 </motion.div>
 
+                {/* Контейнер для кнопок */}
                 <motion.div
+                    className="header__buttons-container"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 2, duration: 0.8 }}
                 >
                     <Link to="/projects" className="btn-projects">{t("header.btn")}</Link>
+
+                    <button
+                        className="btn-call-to-action"
+                        onClick={() => setIsFormOpen(true)}
+                    >
+                        {t("header.ctaBtn")}
+                    </button>
                 </motion.div>
             </div>
         </header>
+
     );
 };
 

@@ -228,10 +228,10 @@ body .btn-outline span {
 }
 
 
-body.dark .contacts-modern {
+/* body.dark .contacts-modern {
 	background: linear-gradient(145deg, #0e0e0e 0%, #1c1c1c 100%);
 	color: #fff;
-}
+} */
 
 body.light .contacts-modern {
 	background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
@@ -561,24 +561,33 @@ body.light .contacts-modern__glow {
 
 /* CONTACT */
 
-.contact-section {
-	position: relative;
-	width: 100%;
-	background: transparent;
-	color: white;
-	overflow: hidden;
-}
-
-.contact-page-form {
-	margin-bottom: 20px;
-}
-
 .contact-trigger {
 	cursor: pointer;
 	position: relative;
 	text-align: center;
 	padding: 60px 20px;
 	overflow: hidden;
+	width: 90%;
+	max-width: 1000px;
+	margin: 120px auto 22px;
+
+	background: linear-gradient(45deg, #4a0072, #880e4f);
+
+	border-radius: 25px;
+
+	box-shadow:
+		0 0 8px rgba(136, 14, 79, 0.3),
+		0 0 15px rgba(74, 0, 114, 0.3);
+
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-trigger:hover {
+	transform: scale(1.03);
+	box-shadow:
+		0 0 15px #880e4f,
+		0 0 25px #4a0072,
+		0 0 35px #6a1b9a;
 }
 
 .contact-trigger .trigger-content {
@@ -588,63 +597,35 @@ body.light .contacts-modern__glow {
 	gap: 1rem;
 	font-size: 3rem;
 	font-weight: bold;
-	transition: color 0.3s ease;
+	color: #f0f0f0;
+
+	text-shadow:
+		0 0 2px #ccc,
+		0 0 5px #6a1b9a,
+		0 0 8px #880e4f;
+
+	transition: text-shadow 0.3s ease;
+}
+
+.contact-trigger:hover .trigger-content {
+	text-shadow:
+		0 0 3px #ddd,
+		0 0 8px #ba2d65,
+		0 0 14px #7b1fa2,
+		0 0 18px #6a1b9a;
 }
 
 .contact-trigger .arrow {
 	font-size: 2.5rem;
 	transition: transform 0.3s ease;
-}
-
-.contact-trigger .line {
-	content: '';
-	position: absolute;
-	left: 0;
-	width: 100vw;
-	height: 1px;
-	background: linear-gradient(to right, #6a00ff, #b300ff);
-	transform: scaleX(0);
-	transition: transform 0.4s ease;
-}
-
-.contact-trigger .top-line {
-	top: 0;
-	transform-origin: left;
-}
-
-.contact-trigger .bottom-line {
-	bottom: 0;
-	transform-origin: right;
-}
-
-.contact-trigger:hover .top-line {
-	transform: scaleX(1);
-	transform-origin: right;
-}
-
-.contact-trigger:hover .bottom-line {
-	transform: scaleX(1);
-	transform-origin: left;
+	color: #fff;
 }
 
 .contact-trigger:hover .arrow {
 	transform: translateX(10px);
 }
 
-.popup-form {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 100vw;
-	height: 100vh;
-	background: radial-gradient(circle at left, #10010c 0%, #000 70%);
-	display: flex;
-	justify-content: space-between;
-	padding: 80px 100px;
-	z-index: 1000;
-	color: #fff;
-	overflow-y: auto;
-}
+
 
 .popup-form form {
 	display: flex;
@@ -838,6 +819,10 @@ button[type="submit"] {
 		top: -15dvh;
 		margin-bottom: 0;
 	}
+
+	.contact-trigger {
+		margin: 120px auto 0;
+	}
 }
 
 @media (max-width: 768px) {
@@ -848,8 +833,12 @@ button[type="submit"] {
 	}
 
 	.header__title {
-		font-size: 30px;
-		margin-top: 37px;
+		font-size: 31px;
+		margin-top: 25px;
+	}
+
+	.header__buttons-container {
+		flex-direction: column;
 	}
 
 	.header__title strong {
@@ -1052,6 +1041,14 @@ button[type="submit"] {
 
 	.contacts-modern__grid {
 		grid-template-columns: 1fr;
+	}
+
+	.contact-trigger {
+		margin-bottom: 3dvh;
+	}
+
+	.contact-trigger .trigger-content {
+		font-size: 2rem;
 	}
 
 }

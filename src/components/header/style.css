@@ -5,10 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: var(--header-bg);
-
-
     color: var(--header-text);
     text-align: center;
 }
@@ -28,7 +25,7 @@
     top: 30px;
 }
 
-
+/* Центрируем заголовок */
 .header__title {
     margin-bottom: 4px;
     font-size: 35px;
@@ -61,114 +58,60 @@
     margin-top: 0.5em;
 }
 
-.btn-projects {
-    display: inline-block;
+
+.header__buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     margin-top: 30px;
-    padding: 12px 28px;
-    font-size: 20px;
-    font-family: 'Jersey 25', sans-serif;
+}
+
+
+.btn-projects,
+.btn-call-to-action {
+    padding: 14px 32px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Кнопка для проекта (See Projects) */
+.btn-projects {
+    background-color: #6c4fef;
     color: #fff;
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    border: 2px solid #8a00cc;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 8px #8a00cc, 0 0 16px #4d0073, 0 0 24px rgba(138, 0, 204, 0.5);
+    border: 3px solid #5c45d8;
+
 }
 
 .btn-projects:hover {
-    background: linear-gradient(90deg, #4d0073, #8a00cc);
+    background-color: #5c45d8;
+    box-shadow: 0 0 12px #6c4fef, 0 0 20px #5c45d8;
+}
+
+
+.btn-call-to-action {
+    background-color: #5f0287;
     color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 0 16px #8a00cc, 0 0 24px #4d0073, 0 0 32px rgba(138, 0, 204, 0.7);
+    border: 3px solid #740a8b;
+
 }
 
-/* FORM */
-.header-form-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.btn-call-to-action:hover {
+    background-color: #280238;
+    box-shadow: 0 0 12px #3e2b94, 0 0 20px #b300ff;
 }
 
-.form-container {
-    background: #fff;
-    padding: 30px;
-    max-width: 600px;
-    width: 100%;
-    border-radius: 10px;
+.btn-projects:active,
+.btn-call-to-action:active {
     position: relative;
+    top: 1px;
 }
 
-.close-popup {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.input-grid {
-    display: grid;
-    gap: 10px;
-    margin: 15px 0;
-}
-
-.site-type-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.success-popup {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #4BB543;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    z-index: 1001;
-}
-
-/* FORM */
-
-/* Контейнер капчи */
-#recaptcha-container {
-    margin-top: 1rem;
-    margin-right: 1rem;
-    transform: scale(1);
-    transform-origin: 0 0;
-}
-
-.recaptcha-error {
-    outline: 2px solid red;
-    outline-offset: 4px;
-    border-radius: 4px;
-    transition: outline 0.3s ease;
-}
-
-.recaptcha-error-text {
-    color: red;
-    font-size: 0.9rem;
-    margin-top: 6px;
-    margin-bottom: 12px;
-}
-
-@media (max-width: 480px) {
-    #recaptcha-container {
-        transform: scale(0.85);
-        -webkit-transform: scale(0.85);
-        transform-origin: 0 0;
-    }
+/* Центровка кнопки на странице проджектс*/
+.btn-center {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
 }

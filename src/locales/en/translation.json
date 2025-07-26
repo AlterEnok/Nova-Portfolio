@@ -36,7 +36,8 @@
         "titleEm": "Nova Team",
         "subtitle": "We are a Ukrainian web development studio. From unique design to clean code – we deliver full-service websites! Your business deserves a fast start – hit the button and let’s go!",
         "text": "Your vision, is our mission",
-        "btn": "See Projects"
+        "btn": "See Projects",
+        "ctaBtn": "Leave a request"
     },
     "faq": {
         "title": "FAQs",

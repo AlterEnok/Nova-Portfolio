@@ -1,3 +1,4 @@
+
 import Header from './../components/header/Header';
 import Powering from './../components/Powering/powering';
 import Processing from './../components/Processing/processing';
@@ -13,7 +14,7 @@ const Home = ({ isFormOpen, setIsFormOpen }) => {
         <>
             <AnimatedPage>
                 <div data-lenis-scroll>
-                    <Header />
+                    <Header setIsFormOpen={setIsFormOpen} /> {/* Передаем setIsFormOpen в Header */}
                     <main className="section">
                         <div className="section-divider">
                             <svg

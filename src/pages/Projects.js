@@ -5,11 +5,13 @@ import AnimatedPage from '../components/SmoothPage/smooth.js';
 import Sparkle from '../components/Sparkle/sparkle.js';
 import ContactForm from '../components/Form/form.js'; // ⬅️ Импорт формы
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
     const [isFormOpen, setIsFormOpen] = useState(false); // ⬅️ Состояние формы
     const conceptProjects = projects.filter(p => p.type !== 'commercial');
     const commercialProjects = projects.filter(p => p.type === 'commercial');
+    const { t } = useTranslation();
 
     return (
         <AnimatedPage>
@@ -24,6 +26,22 @@ const Projects = () => {
                     >
                         Concept Projects
                     </motion.h2>
+
+
+                    <motion.div
+                        className="projects__cta-btn"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                        <button
+                            className="btn-call-to-action btn-center"
+                            onClick={() => setIsFormOpen(true)}
+                        >
+                            {t("header.ctaBtn")}
+                        </button>
+                    </motion.div>
                     <ul className="projects">
                         {conceptProjects.map((project, index) => (
                             <Project

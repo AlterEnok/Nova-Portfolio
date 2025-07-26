@@ -163,8 +163,9 @@ const ContactForm = ({ isOpen, setIsOpen, className }) => {
 
                                 <div
                                     id="recaptcha-container"
-                                    className={`g-recaptcha ${recaptchaError ? 'recaptcha-error' : ''}`}
-                                ></div>
+                                    className={`recaptcha-container g-recaptcha ${recaptchaError ? 'recaptcha-error' : ''}`}
+                                />
+
                                 {recaptchaError && (
                                     <p className="recaptcha-error-text">
                                         {t("form.captchaError")}

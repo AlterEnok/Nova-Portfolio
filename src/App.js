@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
 import Project from './pages/Project';
-import Notification from './components/Notification/notification';
 
 import ScrollReset from './utils/scrollToTop';
 import ScrollToTop from './utils/scrollToTop';
@@ -32,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Notification onClick={() => setIsFormOpen(true)} />
+
         <ScrollReset />
         <Navbar />
 
