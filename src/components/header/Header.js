@@ -20,7 +20,8 @@ const Header = ({ setIsFormOpen }) => {
                     color: 0x915eff,
                     backgroundColor: 0x0e0e0e,
                     maxDistance: 25.0,
-                    spacing: 20.0
+                    spacing: 20.0,
+
                 })
             );
         }
@@ -31,6 +32,8 @@ const Header = ({ setIsFormOpen }) => {
             }
         };
     }, [vantaEffect]);
+
+
 
     return (
         <header className="header" ref={vantaRef}>

@@ -28,12 +28,9 @@ i18n
             escapeValue: false,
         },
         detection: {
-            // Явно отключаем автоматическое определение языка браузера
+
             order: [],
             caches: [],
         },
     });
-
-console.log('🌐 i18n initialized with language:', i18n.language);
-
 export default i18n;
