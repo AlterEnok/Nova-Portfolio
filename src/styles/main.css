@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700&display=swap');
 
 :root {
 	/* Colors */
@@ -73,7 +74,10 @@ body {
 	max-width: 1400px;
 }
 
+.container--projects {
+	max-width: 1400px;
 
+}
 
 /* CURSOR */
 .custom-cursor {
@@ -97,8 +101,8 @@ body {
 
 .title-1 {
 	margin-bottom: 60px;
-	margin-top: 120px;
-	font-family: 'Jersey 25', sans-serif;
+	margin-top: 140px;
+	font-family: 'Tektur', sans-serif;
 	font-size: 60px;
 	letter-spacing: 0.3cap;
 	font-weight: 700;
@@ -134,7 +138,7 @@ body.dark .title-1 {
 	border: 1px solid #6a00ff;
 
 	background-color: transparent;
-	color: fff;
+
 	font-weight: 600;
 	text-decoration: none;
 	transition: color 0.4s ease;
@@ -171,12 +175,11 @@ body.light-theme .btn-outline {
 
 }
 
-
-body.dark-theme .btn-outline {
-	border: 1px solid #cf1a1a;
+body.dark .btn-outline,
+body.dark .btn-outline span {
 	color: #fff;
-	background-color: rgba(0, 0, 0, 0.2);
 }
+
 
 
 body .btn-outline span {
@@ -191,7 +194,7 @@ body .btn-outline span {
 /* Project details */
 
 .project-details {
-	margin: 0 auto;
+	margin: 15px auto;
 	max-width: 865px;
 
 	display: flex;
@@ -222,16 +225,13 @@ body .btn-outline span {
 .contacts-modern {
 	position: relative;
 	min-height: 100vh;
-	padding: 100px 20px;
+	padding: 180px 20px;
 	overflow: hidden;
 	color: #b300ff;
 }
 
 
-/* body.dark .contacts-modern {
-	background: linear-gradient(145deg, #0e0e0e 0%, #1c1c1c 100%);
-	color: #fff;
-} */
+
 
 body.light .contacts-modern {
 	background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
@@ -260,7 +260,7 @@ body.light .contacts-modern__title {
 }
 
 .contacts-modern__title {
-	font-family: 'Jersey 25', sans-serif;
+	font-family: 'Tektur', sans-serif;
 	font-size: 3rem;
 	text-align: center;
 	letter-spacing: 0.5cap;
@@ -813,6 +813,91 @@ button[type="submit"] {
 	outline: none;
 }
 
+/* PRIVACY */
+
+.privacy {
+	padding: 160px 20px;
+	background: #f8f8f8;
+	color: #111;
+}
+
+.privacy__container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.privacy__title {
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid rgb(108, 92, 231);
+}
+
+
+.privacy__updated {
+	font-size: 14px;
+	color: #777;
+	margin-bottom: 30px;
+}
+
+.privacy__intro {
+	margin-bottom: 30px;
+	line-height: 1.6;
+}
+
+.privacy h2 {
+	margin-top: 40px;
+	margin-bottom: 15px;
+	font-size: 22px;
+	color: rgb(108, 92, 231);
+}
+
+.privacy p {
+	line-height: 1.6;
+	margin-bottom: 15px;
+}
+
+.privacy ul {
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+.privacy li {
+	margin-bottom: 8px;
+}
+
+.privacy__contacts p {
+	margin-bottom: 8px;
+}
+
+.privacy__contacts a {
+	color: rgb(108, 92, 231);
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+.privacy__contacts a:hover {
+
+	text-decoration: underline;
+	text-shadow: 0 0 6px rgba(106, 0, 255, 0.4);
+}
+
+/* 🌙 DARK MODE */
+body.dark .privacy {
+	background: #0e0e0e;
+	color: #eaeaea;
+}
+
+body.dark .privacy h2 {
+	color: rgb(0, 191, 255);
+}
+
+body.dark .privacy__contacts a {
+	color: rgb(0, 191, 255);
+}
+
+
+
 @media (min-width: 1900px) and (max-width: 3500px) {
 	.contact-page-form {
 		position: relative;
@@ -826,32 +911,70 @@ button[type="submit"] {
 
 
 
+	.privacy {
+		padding: 200px 40px;
+	}
+
+	.privacy__container {
+		max-width: 1100px;
+	}
+
+	.privacy__title {
+		font-size: 3.2rem;
+	}
+
+	.privacy h2 {
+		font-size: 28px;
+		margin-top: 50px;
+	}
+
+	.privacy p {
+		font-size: 18px;
+	}
+
+	.privacy li {
+		font-size: 17px;
+	}
+
+	.privacy__updated {
+		font-size: 16px;
+	}
+
+	.privacy__contacts a {
+		font-size: 18px;
+	}
+
+}
+
+@media (max-width: 1024px) {
+	.privacy {
+		padding: 140px 30px;
+	}
+
+	.privacy__container {
+		max-width: 720px;
+	}
+
+	.privacy__title {
+		font-size: 2.2rem;
+	}
+
+	.privacy h2 {
+		font-size: 20px;
+	}
+
+	.privacy p,
+	.privacy li {
+		font-size: 15px;
+	}
+
+	.privacy__contacts a {
+		font-size: 15px;
+	}
 }
 
 @media (max-width: 768px) {
-	/* Header  */
 
-	.header {
-		min-height: unset;
-	}
-
-	.header__title {
-		font-size: 33px;
-		margin-top: -30px;
-	}
-
-	.header__buttons-container {
-		flex-direction: column;
-		margin-top: 15px;
-	}
-
-	.header__title strong {
-		font-size: 40px;
-	}
-
-	.header__title em {
-		font-size: 75px;
-	}
 
 	.custom-cursor {
 		display: none !important;
@@ -886,17 +1009,19 @@ button[type="submit"] {
 
 	.nav-list {
 		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100vh;
-		width: 100vw;
+		top: -44px;
+		left: -22px;
+		height: 102dvh;
+		width: 114%;
 		background: #0f0c1d;
+		-webkit-backdrop-filter: blur(6px);
 		backdrop-filter: blur(6px);
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		gap: 30px;
-		transform: translateY(-100%);
+		transform: translateY(-150%);
 		transition: transform 0.3s ease-in-out;
 		z-index: 10000;
 	}
@@ -971,13 +1096,7 @@ button[type="submit"] {
 		background: transparent;
 	}
 
-	body.no-scroll {
-		overflow: hidden;
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		touch-action: none;
-	}
+
 
 	.skills {
 		gap: 60px;
@@ -991,7 +1110,7 @@ button[type="submit"] {
 
 	.title-1 {
 
-		margin-top: 13vh;
+		margin-top: 22vh;
 		font-size: 40px;
 	}
 
@@ -1023,19 +1142,7 @@ button[type="submit"] {
 		font-size: 16px;
 	}
 
-	/* Footer */
 
-	.footer {
-		padding: 40px 0 30px;
-	}
-
-	.footer__wrapper {
-		row-gap: 20px;
-	}
-
-	.footer__sections {
-		margin-left: 32vw
-	}
 
 	/* Social */
 
@@ -1059,4 +1166,65 @@ button[type="submit"] {
 		font-size: 2rem;
 	}
 
+
+	.privacy {
+		padding: 120px 20px;
+	}
+
+	.privacy__container {
+		max-width: 100%;
+	}
+
+	.privacy__title {
+		font-size: 1.8rem;
+		line-height: 1.2;
+	}
+
+	.privacy__updated {
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+
+	.privacy h2 {
+		font-size: 18px;
+		margin-top: 30px;
+	}
+
+	.privacy p {
+		font-size: 14px;
+	}
+
+	.privacy ul {
+		padding-left: 18px;
+	}
+
+	.privacy li {
+		font-size: 14px;
+	}
+
+	.privacy__contacts a {
+		font-size: 14px;
+		word-break: break-word;
+		/* 🔥 чтобы email не ломал верстку */
+	}
+
+}
+
+@media (max-width: 480px) {
+	.privacy {
+		padding: 170px 15px;
+	}
+
+	.privacy__title {
+		font-size: 1.6rem;
+	}
+
+	.privacy p,
+	.privacy li {
+		font-size: 13px;
+	}
+
+	.privacy h2 {
+		font-size: 16px;
+	}
 }

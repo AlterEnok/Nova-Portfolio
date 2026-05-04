@@ -1,74 +1,75 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTelegram, faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
     const footerRef = useRef(null);
-    const glowRef = useRef(null);
+    const [visible, setVisible] = useState(false);
+    const { t } = useTranslation();
 
     useEffect(() => {
-        const footer = footerRef.current;
-        const glow = document.createElement('div');
-        glow.classList.add('footer__mouse-glow');
-        glowRef.current = glow;
-        footer.appendChild(glow);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                } else {
+                    setVisible(false);
+                }
+            },
+            {
+                threshold: 0.25,
+                rootMargin: "0px 0px -10% 0px"
+            }
+        );
 
-        const handleMouseMove = (e) => {
-            const x = (e.clientX / window.innerWidth) * 100;
-            const y = (e.clientY / window.innerHeight) * 100;
-            glow.style.setProperty('--x', `${x}%`);
-            glow.style.setProperty('--y', `${y}%`);
-        };
+        if (footerRef.current) {
+            observer.observe(footerRef.current);
+        }
 
-        footer.addEventListener('mousemove', handleMouseMove);
-
-        return () => {
-            footer.removeEventListener('mousemove', handleMouseMove);
-            glow.remove();
-        };
+        return () => observer.disconnect();
     }, []);
 
-
-
-
     return (
-        <footer className="footer" ref={footerRef}>
-            <div className="footer__pulse-bg" />
-            <div className="container">
-                <div className="footer__wrapper">
-                    <div className="footer__sections">
-                        <div className="footer__section">
-                            <h3>Socials</h3>
-                            <ul>
-                                <li><a href="https://t.me/The_Nova_Team"><FontAwesomeIcon icon={faTelegram} /> Telegram</a></li>
-                                <li><a href="https://www.instagram.com/novateamweb/"><FontAwesomeIcon icon={faInstagram} /> Instagram</a></li>
-                                <li><a href="https://www.facebook.com"><FontAwesomeIcon icon={faFacebook} /> Facebook</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer__section">
-                            <h3>Work</h3>
-                            <ul>
-                                <li><Link to="/">Home</Link></li>
-                                <li><a href="#projects">Portfolio</a></li>
-                            </ul>
-                        </div>
-                        <div className="footer__section">
-                            <h3>Contact</h3>
-                            <ul>
-                                <li>
-                                    <a href="#contacts">Contact Page</a>
-                                </li>
-                                <li><a href="mailto:novateam@example.com">Email us</a></li>
-                            </ul>
-                        </div>
+        <footer className={`footer ${visible ? 'footer--visible' : ''}`} ref={footerRef}>
+
+            <div className="footer__lines">
+                <div className="line line--1"></div>
+                <div className="line line--2"></div>
+                <div className="line line--3"></div>
+                <div className="line line--4"></div>
+            </div>
+
+            <div className="footer__content">
+                <div className="footer__divider" />
+
+                <div className="footer__top">
+                    <h2>{t("footerTitle")}</h2>
+                    <div className="footer__email">
+                        <a href="mailto:novateam.web@gmail.com">
+                            novateam.web@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div className="footer__divider" />
+
+                <div className="footer__grid">
+                    <div className="footer__nav">
+                        <Link to="/">{t("footerHome")}</Link>
+                        <Link to="/projects">{t("footerPortfolio")}</Link>
+                        <Link to="/contacts">{t("footerContacts")}</Link>
                     </div>
 
-                    <div className="copyright">
-                        <p>© 2025 Nova Team — All rights reserved.</p>
+                    <div className="footer__links">
+                        <a href="https://t.me/The_Nova_Team">Telegram</a>
+                        <a href="https://www.instagram.com/novateamweb/">Instagram</a>
+                        <Link to="/privacy">{t("footerPrivacy")}</Link>
                     </div>
+                </div>
+
+                <div className="footer__bottom">
+                    {t("footerRights")}
                 </div>
             </div>
         </footer>

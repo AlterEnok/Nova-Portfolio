@@ -1,6 +1,6 @@
 .section__title {
     font-size: clamp(2rem, 4vw, 3rem);
-    font-family: 'Jersey 25', sans-serif;
+    font-family: 'Tektur', sans-serif;
     text-align: center;
     margin-bottom: 3rem;
     background: linear-gradient(90deg, #6a00ff, #b300ff);
@@ -15,21 +15,27 @@
 }
 
 .skills {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
     justify-content: center;
     gap: 30px;
     padding: 60px 20px;
-    perspective: 1000px;
+}
+
+.skills__card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
 }
 
 
 .skills__card {
+    font-family: 'Tektur', sans-serif;
     position: relative;
     background: var(--project-card-bg);
     border-radius: 20px;
     padding: 30px;
-    max-width: 300px;
+    width: 100%;
+    max-width: 360px;
     text-align: center;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     transform-style: preserve-3d;
@@ -39,8 +45,8 @@
     transform: perspective(600px) rotateX(0deg) rotateY(0deg) scale(1);
 }
 
+
 .card__glow {
-    content: '';
     position: absolute;
     top: -50%;
     left: -50%;
@@ -68,16 +74,13 @@
     outline: 3px solid var(--purple);
 }
 
-/* Темная тема */
+
 body.dark .skills__card {
     background-color: var(--project-card-bg);
     color: var(--project-card-text);
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
 }
 
-
-
-/* Светлая тема */
 body.light .skills__card {
     background-color: var(--project-card-bg);
     color: var(--project-card-text);
@@ -87,6 +90,7 @@ body.light .skills__card:hover {
     outline: 3px solid var(--purple);
     background: transparent;
 }
+
 
 .skills__icon {
     width: 48px;
@@ -167,5 +171,37 @@ body.dark .skills__card p {
     100% {
         transform: scaleY(1) rotate(-1deg);
         stroke-dashoffset: 0;
+    }
+}
+
+@media (min-width: 1900px) and (max-width: 3500px) {
+    .skills {
+        grid-template-columns: repeat(4, 420px);
+    }
+
+    .skills__card {
+        max-width: 420px;
+        padding: 40px;
+        border-radius: 24px;
+    }
+
+    .skills__icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 20px;
+    }
+
+    .skills__card h3 {
+        font-size: 28px;
+    }
+
+    .skills__card p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .section__title {
+        font-size: clamp(2.5rem, 3vw, 3.5rem);
+        margin-bottom: 4rem;
     }
 }

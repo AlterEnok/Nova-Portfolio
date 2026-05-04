@@ -1,14 +1,14 @@
 .faq {
-    margin-top: 100px;
+    margin-top: 140px;
 }
 
 .faq__title {
-    font-family: 'Jersey 25', sans-serif;
+    font-family: 'Tektur', sans-serif;
     letter-spacing: 0.3cap;
-    font-size: 36px;
+    font-size: 44px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
     background: linear-gradient(to right, #6a00ff, #b300ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -22,14 +22,15 @@
 .faq__list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 26px;
+
 }
 
 .faq__item {
     position: relative;
     background-color: #111;
-    border-radius: 16px;
-    padding: 24px;
+    border-radius: 20px;
+    padding: 32px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     border: 2px solid transparent;
@@ -40,7 +41,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    border-radius: 16px;
+    border-radius: 20px;
     padding: 2px;
     background: linear-gradient(to right, #7a44c6, #8614b7);
     -webkit-mask:
@@ -53,11 +54,11 @@
 }
 
 .faq__item:hover {
-    box-shadow: 0 0 18px rgba(116, 7, 163, 0.4);
+    box-shadow: 0 0 22px rgba(116, 7, 163, 0.5);
 }
 
 .faq__question {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: #fff;
     display: flex;
@@ -66,19 +67,52 @@
 }
 
 .faq__arrow {
-    font-size: 24px;
+    font-size: 26px;
     color: #b300ff;
     margin-left: 10px;
     transition: transform 0.3s ease;
 }
 
 .faq__answer {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-top: 12px;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-top: 16px;
     color: #ccc;
 }
 
 .faq__item.active .faq__question {
     color: #d283f5;
+}
+
+@media (min-width: 1900px) and (max-width: 3500px) {
+
+    .faq {
+        margin-top: 180px;
+    }
+
+    .faq__title {
+        font-size: 56px;
+        margin-bottom: 80px;
+    }
+
+    .faq__list {
+        gap: 34px;
+    }
+
+    .faq__item {
+        padding: 40px;
+        border-radius: 24px;
+    }
+
+    .faq__question {
+        font-size: 26px;
+    }
+
+    .faq__answer {
+        font-size: 19px;
+    }
+
+    .faq__arrow {
+        font-size: 30px;
+    }
 }

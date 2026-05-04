@@ -43,6 +43,12 @@ import project14Big from './../img/projects/14-big.jpg';
 import project15 from './../img/projects/15.jpg';
 import project15Big from './../img/projects/15-big.jpg';
 
+import project16 from './../img/projects/16.jpg';
+import project16Big from './../img/projects/16-big.jpg';
+
+import project17 from './../img/projects/17.jpg';
+import project17Big from './../img/projects/17-big.jpg';
+
 const projects = [
     {
         id: '0',
@@ -180,7 +186,7 @@ const projects = [
         descriptionKey: 'projectss.Dobrozem.description',// Ключ для перевода
         img: project14,
         imgBig: project14Big,
-        gitHubLink: 'https://dobrozem.land/',
+        gitHubLink: 'https://alterenok.github.io/Vebinar/',
         technologies: ['HTML', 'CSS', 'JS', 'DJANGO'],
         type: 'commercial'
     },
@@ -191,9 +197,29 @@ const projects = [
         descriptionKey: 'projectss.Roslyna.description',// Ключ для перевода
         img: project15,
         imgBig: project15Big,
-        gitHubLink: 'https://alterenok.github.io/roslyna-shop/',
-        technologies: ['REACT', 'JSX', 'TYPESCRIPT', 'DJANGO'],
-        type: 'concept'
+        gitHubLink: 'https://karpatskitravy.com/',
+        technologies: ['REACT', 'CSS', 'TYPESCRIPT', 'DJANGO'],
+        type: 'commercial'
+    },
+    {
+        id: '15',
+        title: 'Fitokarpaty',
+        descriptionKey: 'projectss.Fitokarpaty.description',
+        img: project16,
+        imgBig: project16Big,
+        gitHubLink: 'https://fitokarpaty.com/',
+        technologies: ['REACT', 'CSS', 'DJANGO'],
+        type: 'commercial'
+    },
+    {
+        id: '16',
+        title: 'Vitaminu',
+        descriptionKey: 'projectss.Vitaminu.description',
+        img: project17,
+        imgBig: project17Big,
+        gitHubLink: 'https://vitaminu.net/',
+        technologies: ['REACT', 'CSS', 'DJANGO'],
+        type: 'commercial'
     }
 ];
 export { projects };

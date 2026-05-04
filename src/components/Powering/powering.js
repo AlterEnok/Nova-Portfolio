@@ -73,6 +73,17 @@ const Powering = () => {
             title: t("uiuxTitle"),
             text: t("uiuxText"),
         },
+
+        {
+            icon: "ai.png",
+            title: t("aiTitle"),
+            text: t("aiText"),
+        },
+        {
+            icon: "mobile.png",
+            title: t("mobileTitle"),
+            text: t("mobileText"),
+        },
     ];
 
     return (

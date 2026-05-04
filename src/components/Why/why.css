@@ -12,7 +12,7 @@
     text-align: center;
     font-size: 38px;
     color: #b300ff;
-    font-family: 'Jersey 25', sans-serif;
+    font-family: 'Tektur', sans-serif;
     margin-bottom: 60px;
     position: relative;
     z-index: 2;
@@ -155,4 +155,62 @@
 .neon-dots .dot:nth-child(6) {
     left: 85%;
     animation-delay: 5s;
+}
+
+@media (min-width: 1900px) and (max-width: 3500px) {
+
+    .why-us {
+        margin-top: 120px;
+        padding: 120px 80px;
+        min-height: 900px;
+    }
+
+    .why-us__title {
+        font-size: 64px;
+        margin-bottom: 80px;
+    }
+
+    .why-us__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    .why-us__card {
+        padding: 50px;
+        border-radius: 30px;
+    }
+
+    .why-us__icon {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 30px;
+    }
+
+    .why-us__card h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .why-us__card p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+
+    .why-us__card:hover {
+        transform: scale(1.03) rotate(-0.5deg);
+    }
+
+
+    .neon-dots .dot {
+        width: 14px;
+        height: 14px;
+
+        box-shadow:
+            0 0 15px rgba(179, 0, 255, 0.9),
+            0 0 30px rgba(179, 0, 255, 0.7),
+            0 0 50px rgba(179, 0, 255, 0.5);
+    }
 }

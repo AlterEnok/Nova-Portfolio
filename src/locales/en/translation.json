@@ -4,11 +4,15 @@
     "contacts": "Contacts",
     "poweringProjects": "Powering Projects with",
     "frontendTitle": "Frontend",
-    "frontendText": "We build responsive, high-performance frontends with HTML, CSS, JavaScript, and React. Focused on speed, accessibility, and cross-device consistency, we deliver fast load times and pixel-perfect layouts. We create custom interfaces or Shopify solutions, optimizing code for SEO and easy backend integration. From landing pages to e-commerce and web apps — we craft intuitive, engaging user experiences.",
+    "frontendText": "We specialize in building modern frontend solutions with a strong focus on React. We create fast, scalable, and interactive interfaces that deliver excellent user experience and stable performance across all devices. We go beyond visuals, focusing on client-side logic such as application structure, state management, and performance optimization. We also use HTML, CSS, and JavaScript to deliver flexible solutions for various needs. When required, we implement projects using WordPress. From landing pages to complex web applications — we build products that look modern, perform reliably, and scale with your business.",
     "backendTitle": "Backend",
-    "backendText": "We build scalable backend solutions with Django, FastAPI, Node.js, PHP, and Laravel. Our services include JWT authentication, database integrations (PostgreSQL, MySQL), and REST or GraphQL APIs. We integrate CMS platforms or create custom admin panels. For high-load systems, we design microservices with Kubernetes to ensure flexibility, fault tolerance, and scalability — from MVPs to enterprise platforms.",
+    "backendText": "We build reliable and scalable backend systems using Python, with Django and FastAPI as our core technologies. Our focus goes beyond development — we design architectures that support product growth, from the first users to high-load environments. We develop fast and stable APIs, systems with well-structured business logic, secure authentication and access control, as well as integrations with external services and payment systems. Our backend solutions are designed to remain manageable and predictable in production, with scalability, fault tolerance, and long-term support in mind.",
     "uiuxTitle": "UI/UX",
-    "uiuxText": "We design modern, user-friendly interfaces using Figma and Adobe XD, focusing on clear user flows, accessibility, and visual consistency. Whether it’s a landing page or full product UI, we create intuitive, minimalist designs that engage users and drive conversions.",
+    "uiuxText": "We design modern and user-friendly interfaces with a strong focus on user experience and product business goals. We work in Figma, creating well-thought-out user flows, wireframes, and full UI designs. We pay attention to interaction logic, visual consistency, and responsive behavior. From landing pages to complex products — we craft designs that not only look great but also convert users effectively.",
+    "aiTitle": "AI Integration",
+    "aiText": "We implement AI solutions that truly work in real products and deliver business value. We build systems of any complexity — from simple assistants to full-scale LLM-based solutions using RAG (working with your data). We develop AI assistants and chatbots, intelligent search across documents and knowledge bases, AI-driven process automation, and text and audio processing. We pay special attention to production aspects such as performance, request cost, and system stability. We integrate AI into websites, services, and CRM systems so it becomes a core part of the product, not just a feature for the sake of it.",
+    "mobileTitle": "Mobile Apps",
+    "mobileText": "We develop mobile applications of basic and mid-level complexity using React Native. We build cross-platform solutions for iOS and Android with a single codebase, allowing faster product launches and efficient maintenance. We implement modern UI, intuitive navigation, API integrations, and well-structured application architecture. Our focus is on stability, performance, and scalability, delivering solutions for MVPs, startups, and growing businesses.",
     "workflow": "Our Workflow",
     "steps": {
         "1": {
@@ -35,7 +39,7 @@
     "header": {
         "titleEm": "Nova Team",
         "subtitle": "We are a Ukrainian web development studio. From unique design to clean code – we deliver full-service websites! Your business deserves a fast start – hit the button and let’s go!",
-        "text": "Your vision, is our mission",
+        "badge": "Your vision, is our mission",
         "btn": "See Projects",
         "ctaBtn": "Leave a request"
     },
@@ -43,11 +47,11 @@
         "title": "FAQs",
         "1": {
             "question": "How long does it take to build a website?",
-            "answer": "Usually from 7 to 15 days, depending on the complexity of the project and the developed design/model."
+            "answer": "Usually from 10 days, depending on the project complexity, scope of features, and whether a design or layout is already prepared."
         },
         "2": {
             "question": "Is there any support for the site after its development?”",
-            "answer": "Yes, the first month is free, then 50-60 dollars"
+            "answer": "Yes, we continue to support the project after launch, ensuring its stability and дальнейшее развитие. After the initial support phase, ongoing maintenance is available under individual cooperation terms."
         },
         "3": {
             "question": "What other services do you offer besides website development?",
@@ -168,7 +172,47 @@
             "description": "One-page commercial landing for a land company. Clean, fast, and informative website created to support a webinar campaign. Built with HTML, CSS, JavaScript and Django, fully responsive and client-ready."
         },
         "Roslyna": {
-            "description": "Ідея онлайн-магазину з товарами з Карпатського регіону. Створений концепт сайту з сучасним дизайном і зручною навігацією. Використано React, TypeScript і Django. Повністю адаптивний, розроблений з думкою про подальшу інтеграцію реальних товарів і функціоналу кошика."
+            "description": "Development of an e-commerce platform for a phytotherapy brand 'Roslyna Karpat' (Ternopil branch). Built a modern, user-friendly interface with clear navigation, fully responsive layout, and a scalable architecture ready for full order management and product integration."
+        },
+        "Fitokarpaty": {
+            "description": "Development of a digital commerce platform for the Fitokarpaty brand — another direction of Roslyna Karpat. This project extends the brand ecosystem with a dedicated structure, fast user experience, responsive design, and an optimized architecture built for stability and future feature expansion."
+        },
+        "Vitaminu": {
+            "description": "Development of an e-commerce platform for the Vitaminu brand, focused on selling vitamins and dietary supplements sourced from international suppliers. The project emphasizes user trust, intuitive navigation, and fast product access. Built a fully responsive interface, optimized catalog structure, and prepared the system for scalability and product expansion."
+        }
+    },
+    "footerTitle": "Work with us",
+    "footerHome": "Home",
+    "footerPortfolio": "Portfolio",
+    "footerContacts": "Contacts",
+    "footerPrivacy": "Privacy Policy",
+    "footerRights": "© 2026 Nova Team — All rights reserved.",
+    "privacy": {
+        "title": "Privacy Policy",
+        "updated": "Last updated: 1 May 2026",
+        "intro": "Welcome to Nova Team. We respect your privacy and are committed to protecting your personal data. This policy explains what information we collect, how we use it, and your rights.",
+        "collect": {
+            "title": "Information We Collect",
+            "desc": "When you contact us (via Instagram, Telegram, WhatsApp, email, forms, or Meta Lead Ads), we may collect:",
+            "name": "Your name",
+            "email": "Email address",
+            "phone": "Phone number",
+            "other": "Any other details you choose to share"
+        },
+        "usage": {
+            "title": "How We Use Your Information",
+            "one": "To respond to your requests and provide services",
+            "two": "To send project updates and proposals",
+            "three": "To improve our services and communication"
+        },
+        "meta": {
+            "title": "Meta Lead Ads Data",
+            "text1": "If you submit information through Meta Lead Ads, that information is collected under this Privacy Policy. We will use it only for the purposes described here and in any specific offer terms provided in the ad.",
+            "text2": "We do not target advertising to minors and will not sell or rent your data. Data may only be shared if required by law or necessary to fulfill our agreement with you."
+        },
+        "contact": {
+            "title": "Contact Us",
+            "desc": "If you have any questions about this Privacy Policy, contact us via:"
         }
     }
 }

@@ -4,11 +4,15 @@
     "contacts": "Contacto",
     "poweringProjects": "Impulsando proyectos con",
     "frontendTitle": "Frontend",
-    "frontendText": "Creamos interfaces frontend responsivas y de alto rendimiento con HTML, CSS, JavaScript y React. Enfocados en la velocidad, accesibilidad y consistencia entre dispositivos, ofrecemos tiempos de carga rápidos y diseños precisos al píxel. Desarrollamos interfaces personalizadas o soluciones en Shopify, optimizando el código para SEO y una fácil integración con el backend. Desde landing pages hasta e-commerce y aplicaciones web — diseñamos experiencias de usuario intuitivas y atractivas.",
+    "frontendText": "Nos especializamos en el desarrollo de soluciones frontend modernas con enfoque en React. Creamos interfaces rápidas, escalables e interactivas que ofrecen una excelente experiencia de usuario y un rendimiento estable en todos los dispositivos. No solo trabajamos en lo visual, sino también en la lógica del cliente: estructura de la aplicación, gestión del estado y optimización del rendimiento. También utilizamos HTML, CSS y JavaScript para soluciones flexibles. Si es necesario, desarrollamos proyectos en WordPress. Desde landing pages hasta aplicaciones web complejas — creamos productos modernos, estables y escalables junto con tu negocio.",
     "backendTitle": "Backend",
-    "backendText": "Desarrollamos soluciones backend escalables con Django, FastAPI, Node.js, PHP y Laravel. Nuestros servicios incluyen autenticación JWT, integraciones de bases de datos (PostgreSQL, MySQL) y APIs REST o GraphQL. Integramos plataformas CMS o creamos paneles de administración personalizados. Para sistemas de alta carga, diseñamos microservicios con Kubernetes para garantizar flexibilidad, tolerancia a fallos y escalabilidad — desde MVPs hasta plataformas empresariales.",
+    "backendText": "Desarrollamos sistemas backend fiables y escalables utilizando Python, con Django y FastAPI como tecnologías principales. No solo nos enfocamos en el desarrollo, sino en diseñar arquitecturas capaces de soportar el crecimiento del producto, desde los primeros usuarios hasta altas cargas. Creamos APIs rápidas y estables, sistemas con lógica de negocio bien estructurada, autenticación segura y gestión de accesos, así como integraciones con servicios externos y sistemas de pago. Diseñamos el backend para que sea predecible, escalable y fácil de mantener en producción a largo plazo.",
     "uiuxTitle": "UI/UX",
-    "uiuxText": "Diseñamos interfaces modernas y fáciles de usar con Figma y Adobe XD, enfocándonos en flujos de usuario claros, accesibilidad y coherencia visual. Ya sea una landing page o la interfaz completa de un producto, creamos diseños intuitivos y minimalistas que atraen a los usuarios y aumentan las conversiones.",
+    "uiuxText": "Diseñamos interfaces modernas y fáciles de usar con un fuerte enfoque en la experiencia del usuario y los objetivos del producto. Trabajamos en Figma creando user flows, wireframes y diseños UI completos. Prestamos atención a la lógica de interacción, la coherencia visual y la adaptabilidad. Desde landing pages hasta productos complejos, creamos diseños que no solo se ven bien, sino que también convierten eficazmente.",
+    "aiTitle": "Integración de IA",
+    "aiText": "Implementamos soluciones de IA que realmente funcionan en el producto y aportan valor al negocio. Creamos sistemas de cualquier complejidad — desde asistentes simples hasta soluciones completas basadas en LLM utilizando RAG (trabajo con tus datos). Desarrollamos asistentes y chatbots de IA, búsqueda inteligente en documentos y bases de conocimiento, automatización de procesos con IA y procesamiento de texto y audio. Prestamos especial atención a los aspectos de producción como el rendimiento, el coste de las solicitudes y la estabilidad del sistema. Integramos la IA en sitios web, servicios y sistemas CRM para que forme parte del producto y no sea solo una función aislada.",
+    "mobileTitle": "Aplicaciones móviles",
+    "mobileText": "Desarrollamos aplicaciones móviles de nivel básico y medio utilizando React Native. Creamos soluciones multiplataforma para iOS y Android con una sola base de código, lo que permite lanzar productos más rápido y mantenerlos de forma eficiente. Implementamos interfaces modernas, navegación intuitiva, integraciones con API y una arquitectura bien estructurada. Nos enfocamos en la estabilidad, el rendimiento y la escalabilidad para MVPs, startups y negocios.",
     "workflow": "Nuestro proceso de trabajo",
     "steps": {
         "1": {
@@ -35,7 +39,7 @@
     "header": {
         "titleEm": "Nova Team",
         "subtitle": "Somos un estudio ucraniano de desarrollo web. Desde un diseño único hasta un código limpio, ¡lo hacemos todo llave en mano! Tu negocio merece un inicio rápido – ¡haz clic y vamos allá!",
-        "text": "Tu visión es nuestra misión",
+        "badge": "Tu visión es nuestra misión",
         "btn": "Ver proyectos",
         "ctaBtn": "Enviar una solicitud"
     },
@@ -43,11 +47,11 @@
         "title": "Preguntas frecuentes",
         "1": {
             "question": "¿Cuánto tarda en hacerse un sitio web?",
-            "answer": "Generalmente entre 7 y 15 días, dependiendo de la complejidad y el diseño."
+            "answer": "Normalmente desde 10 días, dependiendo de la complejidad del proyecto, el alcance de las funcionalidades y si ya existe un diseño o maqueta."
         },
         "2": {
             "question": "¿Ofrecen soporte después del desarrollo?",
-            "answer": "Sí, el primer mes es gratis. Luego 50–60 dólares al mes."
+            "answer": "Sí, seguimos apoyando el proyecto después de su lanzamiento, asegurando su funcionamiento estable y desarrollo continuo. Tras la fase inicial de soporte, el mantenimiento adicional está disponible bajo condiciones de colaboración individual."
         },
         "3": {
             "question": "¿Qué otros servicios ofrecen?",
@@ -168,7 +172,47 @@
             "description": "Landing page comercial de una sola página para una empresa de tierras. Sitio web limpio, rápido e informativo, creado para apoyar una campaña de seminario web. Desarrollado con HTML, CSS, JavaScript y Django, totalmente responsivo y listo para el cliente."
         },
         "Roslyna": {
-            "description": "Idea de tienda online con productos de la región de los Cárpatos. Concepto de sitio creado con diseño moderno y navegación fácil de usar. Utiliza React, TypeScript y Django. Totalmente adaptable, desarrollado pensando en la futura integración de productos reales y funcionalidad de carrito."
+            "description": "Desarrollo de una plataforma e-commerce para la venta de fitopreparados de la empresa 'Roslyna Karpat' (sucursal en Ternopil). Se creó una interfaz moderna y fácil de usar, con navegación clara, diseño totalmente responsive y arquitectura preparada para escalar e integrar funcionalidades completas de pedidos."
+        },
+        "Fitokarpaty": {
+            "description": "Desarrollo de una plataforma digital de comercio para la marca Fitokarpaty — otra línea de la empresa Roslyna Karpat. El proyecto amplía el ecosistema de la marca con una estructura independiente, experiencia de usuario rápida, diseño adaptable y una arquitectura optimizada para estabilidad y futuras mejoras."
+        },
+        "Vitaminu": {
+            "description": "Desarrollo de una plataforma de comercio electrónico para la marca Vitaminu, enfocada en la venta de vitaminas y suplementos dietéticos provenientes de proveedores internacionales. El proyecto se centra en la confianza del usuario, navegación intuitiva y acceso rápido a los productos. Se implementó un diseño adaptable y una arquitectura preparada para escalar."
+        }
+    },
+    "footerTitle": "Colabora con nosotros",
+    "footerHome": "Inicio",
+    "footerPortfolio": "Portafolio",
+    "footerContacts": "Contactos",
+    "footerPrivacy": "Política de privacidad",
+    "footerRights": "© 2026 Nova Team — Todos los derechos reservados.",
+    "privacy": {
+        "title": "Política de Privacidad",
+        "updated": "Última actualización: 1 de mayo de 2026",
+        "intro": "Bienvenido a Nova Team. Respetamos su privacidad y nos comprometemos a proteger sus datos personales. Esta política explica qué información recopilamos, cómo la usamos y cuáles son sus derechos.",
+        "collect": {
+            "title": "Información que recopilamos",
+            "desc": "Cuando se comunica con nosotros (a través de Instagram, Telegram, WhatsApp, correo electrónico, formularios o Meta Lead Ads), podemos recopilar:",
+            "name": "Su nombre",
+            "email": "Correo electrónico",
+            "phone": "Número de teléfono",
+            "other": "Cualquier otra información que decida proporcionar"
+        },
+        "usage": {
+            "title": "Cómo usamos la información",
+            "one": "Para responder a sus solicitudes y prestar servicios",
+            "two": "Para enviar actualizaciones y propuestas de proyectos",
+            "three": "Para mejorar nuestros servicios y comunicación"
+        },
+        "meta": {
+            "title": "Datos de Meta Lead Ads",
+            "text1": "Si envía información a través de Meta Lead Ads, se procesará de acuerdo con esta política y solo para los fines descritos aquí.",
+            "text2": "No dirigimos publicidad a menores ni vendemos sus datos. La información solo se compartirá cuando lo exija la ley o sea necesario para cumplir con nuestras obligaciones."
+        },
+        "contact": {
+            "title": "Contacto",
+            "desc": "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos:"
         }
     }
 }

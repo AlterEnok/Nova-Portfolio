@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
 import Project from './pages/Project';
+import Privacy from './pages/Privacy';
 
 import ScrollReset from './utils/scrollToTop';
 import ScrollToTop from './utils/scrollToTop';
@@ -40,6 +41,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/project/:id" element={<Project />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
 
         <ScrollToTop />

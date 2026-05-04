@@ -1,19 +1,23 @@
 .nav {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 0;
     width: 100%;
-    transition: transform 0.3s ease-in-out;
     z-index: 999;
-    padding: 20px 0;
-    background-color: var(--nav-bg);
-    border-bottom: 1px solid var(--nav-border);
-    color: var(--nav-text);
-    letter-spacing: normal;
+    transition: transform 0.3s ease-in-out;
+    background: transparent;
+    padding: 10px 0;
+
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .nav--hidden {
-    transform: translateY(-100%);
+    transform: translateY(-150%);
 }
 
 .nav--visible {
@@ -30,19 +34,14 @@
 }
 
 .logo {
-    margin-right: auto;
     display: flex;
     align-items: center;
-    height: 20px;
-    /* высота шапки */
+    height: 72px;
 }
 
 .logo img {
-
-    max-height: 451%;
+    height: 72px;
     width: auto;
-    object-fit: contain;
-    display: block;
 }
 
 
@@ -59,7 +58,7 @@
     column-gap: 40px;
     font-size: 20px;
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Tektur', sans-serif;
 }
 
 .nav-list__link {
@@ -101,6 +100,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    background: rgba(15, 15, 20, 0.65);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(168, 100, 240, 0.45);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+    margin-top: 10px;
 }
 
 .nav-actions {
@@ -138,7 +148,7 @@
     transform: scale(1.05);
 }
 
-/* Основной стиль (темная тема — по умолчанию) */
+
 .dropdown-content {
     position: absolute;
     top: 130%;
@@ -188,4 +198,19 @@ body:not(.dark) .dropdown-content div {
 
 body:not(.dark) .dropdown-content div:hover {
     background-color: #c6a6ef;
+}
+
+@media (min-width: 1900px) and (max-width: 3500px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .nav-list {
+        font-size: 32px;
+        column-gap: 80px;
+    }
+
+    .logo img {
+        height: 110px;
+    }
 }

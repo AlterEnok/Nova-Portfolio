@@ -38,6 +38,10 @@ const Header = ({ setIsFormOpen }) => {
     return (
         <header className="header" ref={vantaRef}>
             <div className="header__wrapper">
+
+                <div className="header__badge">
+                    {t("header.badge")}
+                </div>
                 <motion.h1
                     className="header__title"
                     initial={{ opacity: 0, y: 60 }}
@@ -45,12 +49,14 @@ const Header = ({ setIsFormOpen }) => {
                     transition={{ duration: 1.2, ease: 'easeOut' }}
                 >
                     <motion.strong
+                        className="header__title-center-only"
                         initial={{ opacity: 0, y: -30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 1, ease: 'easeOut' }}
                     >
                         <em>{t("header.titleEm")}</em>
                     </motion.strong>
+
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -67,7 +73,7 @@ const Header = ({ setIsFormOpen }) => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.6, duration: 1 }}
                 >
-                    <p>{t("header.text")}</p>
+
                 </motion.div>
 
                 {/* Контейнер для кнопок */}

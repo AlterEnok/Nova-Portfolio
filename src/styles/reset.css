@@ -11,7 +11,7 @@
 	box-sizing: border-box;
 }
 
-/* Современный, чистый, минималистичный скроллбар */
+
 ::-webkit-scrollbar {
 	width: 14px;
 	height: 14px;

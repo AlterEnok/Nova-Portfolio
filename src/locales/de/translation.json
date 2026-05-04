@@ -4,11 +4,15 @@
     "contacts": "Kontakt",
     "poweringProjects": "Projekte mit Power durch",
     "frontendTitle": "Frontend",
-    "frontendText": "Wir entwickeln reaktionsschnelle, leistungsstarke Frontends mit HTML, CSS, JavaScript und React. Mit Fokus auf Geschwindigkeit, Barrierefreiheit und geräteübergreifende Konsistenz sorgen wir für schnelle Ladezeiten und pixelgenaue Layouts. Wir erstellen individuelle Benutzeroberflächen oder Shopify-Lösungen und optimieren den Code für SEO sowie eine einfache Backend-Integration. Von Landingpages über E-Commerce bis hin zu Web-Apps – wir gestalten intuitive und ansprechende Nutzererlebnisse.",
+    "frontendText": "Wir sind auf die Entwicklung moderner Frontend-Lösungen mit Fokus auf React spezialisiert. Wir erstellen schnelle, skalierbare und interaktive Benutzeroberflächen, die eine hervorragende User Experience und stabile Performance auf allen Geräten gewährleisten. Wir konzentrieren uns nicht nur auf das Design, sondern auch auf die Logik der Client-Seite, einschließlich Architektur, State-Management und Performance-Optimierung. Zusätzlich nutzen wir HTML, CSS und JavaScript für flexible Lösungen. Bei Bedarf realisieren wir Projekte mit WordPress. Von Landingpages bis hin zu komplexen Webanwendungen — wir entwickeln Produkte, die modern aussehen, stabil funktionieren und mit Ihrem Business wachsen.",
     "backendTitle": "Backend",
-    "backendText": "Wir entwickeln skalierbare Backend-Lösungen mit Django, FastAPI, Node.js, PHP und Laravel. Unsere Leistungen umfassen JWT-Authentifizierung, Datenbank-Integrationen (PostgreSQL, MySQL) sowie REST- oder GraphQL-APIs. Wir integrieren CMS-Systeme oder entwickeln individuelle Admin-Panels. Für hochbelastete Systeme setzen wir Microservices mit Kubernetes um, um Flexibilität, Fehlertoleranz und Skalierbarkeit sicherzustellen – vom MVP bis zur Unternehmensplattform.",
+    "backendText": "Wir entwickeln zuverlässige und skalierbare Backend-Systeme auf Python-Basis mit Django und FastAPI. Unser Fokus liegt nicht nur auf der Entwicklung, sondern auf dem Aufbau einer Architektur, die mit dem Produkt wächst — von den ersten Nutzern bis hin zu hoher Last. Wir erstellen schnelle und stabile APIs, Systeme mit durchdachter Geschäftslogik, sichere Authentifizierung und Zugriffsverwaltung sowie Integrationen mit externen Diensten und Zahlungssystemen. Unsere Backend-Lösungen sind so konzipiert, dass sie im produktiven Einsatz stabil, skalierbar und langfristig wartbar bleiben.",
     "uiuxTitle": "UI/UX",
-    "uiuxText": "Wir gestalten moderne, benutzerfreundliche Interfaces mit Figma und Adobe XD – mit Fokus auf klaren Nutzerflüssen, Barrierefreiheit und visueller Konsistenz. Ob Landingpage oder komplette Produktoberfläche: Wir schaffen intuitive, minimalistische Designs, die Nutzer begeistern und Conversions fördern.",
+    "uiuxText": "Wir entwerfen moderne und benutzerfreundliche Interfaces mit Fokus auf Nutzererfahrung und die geschäftlichen Ziele des Produkts. Wir arbeiten in Figma und erstellen durchdachte User Flows, Wireframes und vollständige UI-Designs. Besonderen Wert legen wir auf Interaktionslogik, visuelle Konsistenz und Responsivität. Von Landingpages bis hin zu komplexen Produkten entwickeln wir Designs, die nicht nur gut aussehen, sondern auch effektiv konvertieren.",
+    "aiTitle": "KI-Integration",
+    "aiText": "Wir implementieren KI-Lösungen, die tatsächlich im Produkt funktionieren und echten Mehrwert für das Unternehmen schaffen. Wir entwickeln Systeme jeder Komplexität — von einfachen Assistenten bis hin zu vollwertigen LLM-basierten Lösungen mit RAG (Arbeit mit Ihren Daten). Wir realisieren KI-Assistenten und Chatbots, intelligente Suche in Dokumenten und Wissensdatenbanken, Automatisierung von Prozessen mit KI sowie Text- und Audioverarbeitung. Besonderes Augenmerk legen wir auf Produktionsaspekte wie Performance, Kosten pro Anfrage und Systemstabilität. Wir integrieren KI in Websites, Services und CRM-Systeme, sodass sie ein Teil des Produkts wird und nicht nur eine isolierte Funktion bleibt.",
+    "mobileTitle": "Mobile Anwendungen",
+    "mobileText": "Wir entwickeln mobile Anwendungen mit React Native für einfache bis mittlere Anforderungen. Wir erstellen plattformübergreifende Lösungen für iOS und Android mit einer gemeinsamen Codebasis, was einen schnellen Produktstart und eine effiziente Wartung ermöglicht. Wir realisieren modernes UI, intuitive Navigation, API-Integrationen und eine durchdachte Anwendungsarchitektur. Unser Fokus liegt auf Stabilität, Performance und Skalierbarkeit für MVPs, Startups und Unternehmen.",
     "workflow": "Unser Arbeitsprozess",
     "steps": {
         "1": {
@@ -35,7 +39,7 @@
     "header": {
         "titleEm": "Nova Team",
         "subtitle": "Wir sind ein ukrainisches Webentwicklungsstudio. Von einzigartigem Design bis zu sauberem Code – wir liefern alles aus einer Hand! Dein Business verdient einen schnellen Start – klick den Button und los geht’s!",
-        "text": "Deine Vision ist unsere Mission",
+        "badge": "Deine Vision ist unsere Mission",
         "btn": "Projekte ansehen",
         "ctaBtn": "Eine Anfrage senden"
     },
@@ -43,11 +47,11 @@
         "title": "Häufige Fragen",
         "1": {
             "question": "Wie lange dauert es, eine Website zu erstellen?",
-            "answer": "In der Regel 7 bis 15 Tage – je nach Komplexität und Design."
+            "answer": "In der Regel ab 10 Tagen, abhängig von der Komplexität des Projekts, dem Funktionsumfang und davon, ob ein fertiges Design oder Layout vorhanden ist."
         },
         "2": {
             "question": "Gibt es Support nach der Entwicklung?",
-            "answer": "Ja, der erste Monat ist kostenlos. Danach 50–60 Dollar pro Monat."
+            "answer": "Ja, wir begleiten das Projekt auch nach dem Launch und sorgen für einen stabilen Betrieb sowie Weiterentwicklung. Nach der ersten Supportphase ist eine weitere Betreuung im Rahmen einer individuellen Zusammenarbeit möglich."
         },
         "3": {
             "question": "Welche weiteren Dienstleistungen bieten Sie an?",
@@ -168,7 +172,47 @@
             "description": "Einseitige kommerzielle Landingpage für ein Bodenunternehmen. Saubere, schnelle und informative Website, erstellt zur Unterstützung einer Webinar-Kampagne. Erstellt mit HTML, CSS, JavaScript und Django – vollständig responsiv und einsatzbereit für den Kunden."
         },
         "Roslyna": {
-            "description": "Eine Online-Shop-Idee mit Produkten aus der Karpatenregion. Ein Konzept der Website mit modernem Design und benutzerfreundlicher Navigation wurde erstellt. Verwendet React, TypeScript und Django. Vollständig responsiv und mit Blick auf die zukünftige Integration realer Produkte und Warenkorbfunktionen entwickelt."
+            "description": "Entwicklung einer E-Commerce-Plattform für den Verkauf von Phytopräparaten der Marke „Roslyna Karpat“ (Niederlassung Ternopil). Modernes, benutzerfreundliches Interface mit klarer Navigation, vollständig responsiv und auf Skalierbarkeit sowie Integration von Bestellfunktionen ausgelegt."
+        },
+        "Fitokarpaty": {
+            "description": "Entwicklung einer digitalen Handelsplattform für die Marke Fitokarpaty — ein weiterer Geschäftsbereich von Roslyna Karpat. Das Projekt erweitert das Marken-Ökosystem mit einer eigenen Struktur, schneller Benutzerführung, responsivem Design und einer optimierten Architektur für Stabilität und zukünftige Erweiterungen."
+        },
+        "Vitaminu": {
+            "description": "Entwicklung einer E-Commerce-Plattform für die Marke Vitaminu, spezialisiert auf den Verkauf von Vitaminen und Nahrungsergänzungsmitteln aus internationalen Lieferketten. Der Fokus liegt auf Vertrauen, intuitiver Navigation und schnellem Zugriff auf Produkte. Responsives Design, optimierte Katalogstruktur und skalierbare Architektur wurden umgesetzt."
+        }
+    },
+    "footerTitle": "Zusammenarbeit mit uns",
+    "footerHome": "Startseite",
+    "footerPortfolio": "Portfolio",
+    "footerContacts": "Kontakt",
+    "footerPrivacy": "Datenschutzrichtlinie",
+    "footerRights": "© 2026 Nova Team — Alle Rechte vorbehalten.",
+    "privacy": {
+        "title": "Datenschutzrichtlinie",
+        "updated": "Zuletzt aktualisiert: 1. Mai 2026",
+        "intro": "Willkommen bei Nova Team. Wir respektieren Ihre Privatsphäre und verpflichten uns, Ihre personenbezogenen Daten zu schützen. Diese Richtlinie erklärt, welche Informationen wir sammeln, wie wir sie verwenden und welche Rechte Sie haben.",
+        "collect": {
+            "title": "Welche Informationen wir sammeln",
+            "desc": "Wenn Sie uns kontaktieren (über Instagram, Telegram, WhatsApp, E-Mail, Formulare oder Meta Lead Ads), können wir folgende Daten erfassen:",
+            "name": "Ihr Name",
+            "email": "E-Mail-Adresse",
+            "phone": "Telefonnummer",
+            "other": "Alle weiteren Informationen, die Sie freiwillig angeben"
+        },
+        "usage": {
+            "title": "Wie wir Ihre Daten verwenden",
+            "one": "Zur Beantwortung Ihrer Anfragen und Bereitstellung unserer Dienstleistungen",
+            "two": "Zum Versand von Projektupdates und Angeboten",
+            "three": "Zur Verbesserung unserer Dienstleistungen und Kommunikation"
+        },
+        "meta": {
+            "title": "Meta Lead Ads Daten",
+            "text1": "Wenn Sie Informationen über Meta Lead Ads übermitteln, werden diese gemäß dieser Datenschutzrichtlinie verarbeitet und nur für die hier beschriebenen Zwecke verwendet.",
+            "text2": "Wir richten keine Werbung an Minderjährige und verkaufen Ihre Daten nicht. Daten werden nur weitergegeben, wenn dies gesetzlich erforderlich ist oder zur Vertragserfüllung notwendig ist."
+        },
+        "contact": {
+            "title": "Kontakt",
+            "desc": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte:"
         }
     }
 }

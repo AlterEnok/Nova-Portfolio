@@ -11,49 +11,62 @@ const Navbar = () => {
     const [lastScrollY, setLastScrollY] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
     const dropdownRef = useRef(null);
     const hoverTimeout = useRef(null);
+
     const { t, i18n } = useTranslation();
     const [currentLang, setCurrentLang] = useLocalStorage('language', 'ua');
 
     useEffect(() => {
         i18n.changeLanguage(currentLang);
-    }, [currentLang, i18n]);
+    }, [currentLang]);
 
     useEffect(() => {
         const handleScroll = () => {
-            setShowNavbar(window.scrollY <= lastScrollY);
-            setLastScrollY(window.scrollY);
+            const currentScrollY = window.scrollY;
+            setShowNavbar(currentScrollY <= lastScrollY);
+            setLastScrollY(currentScrollY);
         };
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [lastScrollY]);
 
     useEffect(() => {
-        document.body.classList.toggle('no-scroll', menuOpen);
+        if (menuOpen) {
+            const scrollY = window.scrollY;
+
+            document.body.dataset.scrollY = scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
+        } else {
+            const scrollY = document.body.dataset.scrollY;
+
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+
+            window.scrollTo(0, Number(scrollY || 0));
+        }
     }, [menuOpen]);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
+    // ❗ закрытие по клику вне
     useEffect(() => {
         const handleClickOutside = (e) => {
-            if (dropdownOpen && dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+            if (!dropdownRef.current) return;
+            if (!dropdownRef.current.contains(e.target)) {
                 setDropdownOpen(false);
             }
         };
-        document.addEventListener('mousedown', handleClickOutside); // безопаснее, чем click
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, [dropdownOpen]);
+
+        document.addEventListener('click', handleClickOutside);
+        return () => document.removeEventListener('click', handleClickOutside);
+    }, []);
 
     const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
         setCurrentLang(lang);
         setDropdownOpen(false);
         setMenuOpen(false);
@@ -63,45 +76,47 @@ const Navbar = () => {
     const activeLink = "nav-list__link nav-list__link--active";
 
     const LanguageDropdown = () => {
-        const handleMouseEnter = () => {
-            if (!isMobile) {
-                clearTimeout(hoverTimeout.current);
-                setDropdownOpen(true);
-            }
+        const openDropdown = () => {
+            clearTimeout(hoverTimeout.current);
+            setDropdownOpen(true);
         };
 
-        const handleMouseLeave = () => {
-            if (!isMobile) {
-                hoverTimeout.current = setTimeout(() => setDropdownOpen(false), 200);
-            }
+        const closeDropdown = () => {
+            hoverTimeout.current = setTimeout(() => {
+                setDropdownOpen(false);
+            }, 150);
         };
 
-        const toggleDropdownMobile = (e) => {
-            if (isMobile) {
-                e.stopPropagation();
-                setDropdownOpen(prev => !prev);
-            }
+        const toggleDropdown = (e) => {
+            e.stopPropagation();
+            setDropdownOpen(prev => !prev);
         };
 
         return (
             <div
                 className="lang-dropdown"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
                 ref={dropdownRef}
+                onMouseEnter={openDropdown}
+                onMouseLeave={closeDropdown}
             >
                 <div className="lang-wrapper">
                     <button
                         className="lang-btn-text"
-                        onClick={toggleDropdownMobile}
+                        onClick={toggleDropdown}
+                        type="button"
                     >
                         {currentLang.toUpperCase()}
                     </button>
+
                     <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
                         {['en', 'ua', 'de', 'fr', 'es', 'ru']
-                            .filter((lang) => lang !== currentLang)
-                            .map((lang) => (
-                                <div key={lang} onClick={() => changeLanguage(lang)}>
+                            .filter(lang => lang !== currentLang)
+                            .map(lang => (
+                                <div
+                                    key={lang}
+                                    onClick={() => changeLanguage(lang)}
+                                    className="lang-item"
+                                >
                                     {lang.toUpperCase()}
                                 </div>
                             ))}
@@ -115,6 +130,7 @@ const Navbar = () => {
         <nav className={`nav ${showNavbar ? 'nav--visible' : 'nav--hidden'}`}>
             <div className="container">
                 <div className="nav-row">
+
                     <NavLink to="/" className="logo" onClick={() => setMenuOpen(false)}>
                         <img src={logo} alt="Nova Team Logo" />
                     </NavLink>
@@ -130,29 +146,17 @@ const Navbar = () => {
 
                     <ul className={`nav-list ${menuOpen ? 'active' : ''}`}>
                         <li>
-                            <NavLink
-                                to="/"
-                                className={({ isActive }) => isActive ? activeLink : normalLink}
-                                onClick={() => setMenuOpen(false)}
-                            >
+                            <NavLink to="/" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>
                                 {t("home")}
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink
-                                to="/projects"
-                                className={({ isActive }) => isActive ? activeLink : normalLink}
-                                onClick={() => setMenuOpen(false)}
-                            >
+                            <NavLink to="/projects" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>
                                 {t("projects")}
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink
-                                to="/contacts"
-                                className={({ isActive }) => isActive ? activeLink : normalLink}
-                                onClick={() => setMenuOpen(false)}
-                            >
+                            <NavLink to="/contacts" className={({ isActive }) => isActive ? activeLink : normalLink} onClick={() => setMenuOpen(false)}>
                                 {t("contacts")}
                             </NavLink>
                         </li>
@@ -167,6 +171,7 @@ const Navbar = () => {
                         <BtnDarkMode />
                         <LanguageDropdown />
                     </div>
+
                 </div>
             </div>
         </nav>
